@@ -75,7 +75,7 @@ export class ShipSheet extends ActorSheet {
   }
 
 
-  _getCharacteristicOptions (selected) {
+/*   _getCharacteristicOptions (selected) {
     const characteristics = []
     for (let char of Object.values(this.actor.data.data.characteristics)) {
       characteristics.push({
@@ -118,5 +118,5 @@ export class ShipSheet extends ActorSheet {
 
   _getWeaponCharacteristic(weapon) {
       return this.actor.data.data.characteristics.ballisticSkill;
-  }
+  } */
 }

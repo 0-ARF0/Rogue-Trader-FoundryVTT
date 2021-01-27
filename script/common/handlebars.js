@@ -9,6 +9,8 @@ function preloadHandlebarsTemplates() {
     "systems/rogue-trader/template/sheet/actor/npc.html",
     "systems/rogue-trader/template/sheet/actor/limited-sheet.html",
     "systems/rogue-trader/template/sheet/actor/ship.html",
+    "systems/rogue-trader/template/sheet/actor/npcship.html",
+    "systems/rogue-trader/template/sheet/actor/playership.html",
 
     "systems/rogue-trader/template/sheet/actor/tab/abilities.html",
     "systems/rogue-trader/template/sheet/actor/tab/combat.html",

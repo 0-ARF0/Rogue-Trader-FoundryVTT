@@ -1,4 +1,4 @@
-import { ShipSheet } from "./actor.js";
+import { ShipSheet } from "./ship.js";
 
 export class NPCShipSheet extends ShipSheet {
 

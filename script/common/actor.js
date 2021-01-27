@@ -1,12 +1,21 @@
 export class DarkHeresyActor extends Actor {
+
     prepareData() {
         super.prepareData();
-        this._computeCharacteristics(this.data);
-        this._computeSkills(this.data);
-        this._computeItems(this.data);
-        this._computeExperience(this.data);
-        this._computeArmour(this.data);
-        this._computeMovement(this.data);
+        console.log("hello " + this.data.type)
+        if(this.data.type == "npcship" || this.data.type == "playership") {
+            console.log("im a ship");
+        }
+        else {
+            this._computeCharacteristics(this.data);
+            this._computeSkills(this.data);
+            this._computeExperience(this.data);
+            this._computeArmour(this.data);
+            this._computeMovement(this.data);
+            this._computeItems(this.data);
+        }
+        
+
     }
 
     _computeCharacteristics(data) {
@@ -31,8 +40,8 @@ export class DarkHeresyActor extends Actor {
             let characteristic = this._findCharacteristic(data, short)
             //skill.total = characteristic.total + skill.advance;
             //halve the skill if untrained
-            if(skill.advance == -20) {
-                if(characteristic.total > 0) {
+            if (skill.advance == -20) {
+                if (characteristic.total > 0) {
                     skill.total = Math.floor(characteristic.total / 2);
                 }
                 else {
@@ -115,35 +124,35 @@ export class DarkHeresyActor extends Actor {
 
         data.data.armour =
             Object.keys(locations)
-            .reduce((accumulator, location) =>
-                Object.assign(accumulator,
-                    {
-                        [location]: {
-                            total: toughness.bonus,
-                            toughnessBonus: toughness.bonus,
-                            value: 0
-                        }
-                    }), {});
+                .reduce((accumulator, location) =>
+                    Object.assign(accumulator,
+                        {
+                            [location]: {
+                                total: toughness.bonus,
+                                toughnessBonus: toughness.bonus,
+                                value: 0
+                            }
+                        }), {});
 
         // object for storing the max armour
         let maxArmour = Object.keys(locations)
-        .reduce((acc, location) =>
-            Object.assign(acc, {[location]: 0}), {})
+            .reduce((acc, location) =>
+                Object.assign(acc, { [location]: 0 }), {})
 
         // for each item, find the maximum armour val per location
         data.items
-        .filter(item => item.type === "armour")
-        .reduce((acc, armour) => {
-            Object.keys(locations)
-            .forEach((location) => {
-                    let armourVal = armour.data.part[location] || 0;
-                    if (armourVal > acc[location]) {
-                        acc[location] = armourVal;
+            .filter(item => item.type === "armour")
+            .reduce((acc, armour) => {
+                Object.keys(locations)
+                    .forEach((location) => {
+                        let armourVal = armour.data.part[location] || 0;
+                        if (armourVal > acc[location]) {
+                            acc[location] = armourVal;
+                        }
                     }
-                }
-            )
-            return acc;
-        }, maxArmour);
+                    )
+                return acc;
+            }, maxArmour);
 
         data.data.armour.head.value = maxArmour["head"];
         data.data.armour.leftArm.value = maxArmour["leftArm"];
@@ -177,7 +186,7 @@ export class DarkHeresyActor extends Actor {
                 return characteristic;
             }
         }
-        return {total: 0};
+        return { total: 0 };
     }
 
     _computeEncumbrance(data, encumbrance) {

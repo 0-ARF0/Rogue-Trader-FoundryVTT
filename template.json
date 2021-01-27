@@ -3,7 +3,8 @@
     "types": [
       "acolyte",
       "npc",
-      "ship"
+      "playership",
+      "npcship"
     ],
     "templates": {
       "characteristics": {
@@ -1174,10 +1175,17 @@
       "threatLevel": 0,
       "size": 4
     },
-    "ship": {
+    "playership": {
       "templates": [
         "shipCharacteristics",
         "shipInitiative"
+      ],
+      "hullType": "frigate"
+    },
+    "npcship": {
+      "templates": [
+      "shipCharacteristics",
+      "shipInitiative"
       ],
       "hullType": "frigate"
     }
