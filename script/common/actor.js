@@ -31,8 +31,8 @@ export class DarkHeresyActor extends Actor {
             let characteristic = this._findCharacteristic(data, short)
             skill.total = characteristic.total + skill.advance;
             //halve the skill if untrained
-            if(skill.characteristic.total > 0) {
-
+            if(characteristic.total > 0 && skill.advance == -20) {
+                skill.total = Math.floor(characteristic.total / 2);
             }
             if (skill.isSpecialist) {
                 for (let speciality of Object.values(skill.specialities)) {
