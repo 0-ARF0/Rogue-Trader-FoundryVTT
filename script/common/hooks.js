@@ -2,6 +2,7 @@ import { DarkHeresyActor } from "./actor.js";
 import { DarkHeresyItem } from "./item.js";
 import { AcolyteSheet } from "../sheet/actor/acolyte.js";
 import { NpcSheet } from "../sheet/actor/npc.js";
+import { ShipSheet } from "../sheet/actor/ship.js";
 import { WeaponSheet } from "../sheet/weapon.js";
 import { AmmunitionSheet } from "../sheet/ammunition.js";
 import { WeaponModificationSheet } from "../sheet/weapon-modification.js";
@@ -40,6 +41,7 @@ Hooks.once("init", () => {
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("rogue-trader", AcolyteSheet, { types: ["acolyte"], makeDefault: true });
     Actors.registerSheet("rogue-trader", NpcSheet, { types: ["npc"], makeDefault: true });
+    Actors.registerSheet("rogue-trader", ShipSheet, { types: ["ship"], makeDefault: true});
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("rogue-trader", WeaponSheet, { types: ["weapon"], makeDefault: true });
     Items.registerSheet("rogue-trader", AmmunitionSheet, { types: ["ammunition"], makeDefault: true });

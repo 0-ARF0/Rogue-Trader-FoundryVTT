@@ -8,6 +8,7 @@ function preloadHandlebarsTemplates() {
     "systems/rogue-trader/template/sheet/actor/acolyte.html",
     "systems/rogue-trader/template/sheet/actor/npc.html",
     "systems/rogue-trader/template/sheet/actor/limited-sheet.html",
+    "systems/rogue-trader/template/sheet/actor/ship.html",
 
     "systems/rogue-trader/template/sheet/actor/tab/abilities.html",
     "systems/rogue-trader/template/sheet/actor/tab/combat.html",
