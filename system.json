@@ -1,12 +1,12 @@
 {
   "name": "rogue-trader",
   "title": "Rogue Trader",
-  "description": "Innocence proves nothing",
-  "version": "0.1",
+  "description": "Roleplaying in the Grim Darkness of the 41st Millenium",
+  "version": "1.0",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
-  "author": "fredthedeadhead, Moo Man, Perfectro, converted to Rogue Trader by DS",
+  "author": "fredthedeadhead, Moo Man, Perfectro, 0-ARF0",
   "scripts": [],
   "esmodules": [
     "script/common/hooks.js"
