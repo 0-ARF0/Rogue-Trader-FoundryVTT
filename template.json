@@ -89,6 +89,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -99,6 +100,7 @@
               "Per"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -109,6 +111,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -119,6 +122,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -129,6 +133,7 @@
               "T"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -140,6 +145,7 @@
               "Inf"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -150,6 +156,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -160,6 +167,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "adeptaSororitas": {
@@ -195,6 +203,7 @@
               "S"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -205,6 +214,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -215,6 +225,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -225,6 +236,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "adeptusArbites": {
@@ -272,12 +284,12 @@
                 "advance": -20,
                 "cost": 0
               },
-              "navigators": {
+              "koronusExpanse": {
                 "label": "Koronus Expanse",
                 "advance": -20,
                 "cost": 0
               },
-              "planetaryDefenceForces": {
+              "navisNobilite": {
                 "label": "Navis Nobilite",
                 "advance": -20,
                 "cost": 0
@@ -305,6 +317,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -315,6 +328,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -325,6 +339,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -335,6 +350,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -345,6 +361,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "ground": {
@@ -372,6 +389,7 @@
               "Per"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -382,6 +400,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "adeptusMechanicus": {
@@ -447,6 +466,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -457,6 +477,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -467,6 +488,7 @@
               "WP"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -477,6 +499,7 @@
               "S"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -487,6 +510,7 @@
               "WP"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -497,6 +521,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -507,6 +532,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -517,6 +543,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -527,6 +554,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "surface": {
@@ -552,6 +580,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "dancer": {
@@ -577,6 +606,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "personal": {
@@ -602,6 +632,7 @@
               "Per"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -612,6 +643,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "archaic": {
@@ -702,6 +734,7 @@
               "Per"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -712,6 +745,7 @@
               "Per"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -722,6 +756,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "administratum": {
@@ -767,6 +802,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -777,6 +813,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -787,6 +824,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -797,6 +835,7 @@
               "Ag"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -807,6 +846,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "eldar": {
@@ -852,6 +892,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -862,6 +903,7 @@
               "S"
             ],
             "advance": -20,
+            "advancedSkill": false,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -872,6 +914,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -882,6 +925,7 @@
               "Int"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": false,
             "specialities": {},
             "cost": 0
@@ -894,6 +938,7 @@
               "Fel"
             ],
             "advance": -20,
+            "advancedSkill": true,
             "isSpecialist": true,
             "specialities": {
               "archaeologist": {
@@ -957,6 +1002,17 @@
                 "cost": 0
               }
             }
+          },
+          "wrangling": {
+            "label": "SKILL.WRANGLING",
+            "characteristics": [
+              "Int"
+            ],
+            "advance": -20,
+            "advancedSkill": true,
+            "isSpecialist": false,
+            "specialities": {},
+            "cost": 0
           }
         }
       },
