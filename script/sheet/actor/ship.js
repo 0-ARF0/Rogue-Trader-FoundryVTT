@@ -75,19 +75,19 @@ export class ShipSheet extends ActorSheet {
   }
 
 
-/*   _getCharacteristicOptions (selected) {
-    const characteristics = []
-    for (let char of Object.values(this.actor.data.data.characteristics)) {
-      characteristics.push({
+   _getshipCharacteristicOptions (selected) {
+    const shipCharacteristics = []
+    for (let char of Object.values(this.actor.data.data.shipCharacteristics)) {
+      shipCharacteristics.push({
         label: char.label,
         target: char.total,
         selected: char.short === selected
       })
     }
-    return characteristics
+    return shipCharacteristics;
   }
 
-
+/*
   async _prepareRollWeapon(event) {
     event.preventDefault();
     const div = $(event.currentTarget).parents(".item");

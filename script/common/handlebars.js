@@ -22,6 +22,15 @@ function preloadHandlebarsTemplates() {
     "systems/rogue-trader/template/sheet/actor/tab/psychic-powers.html",
     "systems/rogue-trader/template/sheet/actor/tab/stats.html",
 
+    "systems/rogue-trader/template/sheet/actor/ship/tab/abilities.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/combat.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/components.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/crew.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/notes.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/npc-notes.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/npc-stats.html",
+    "systems/rogue-trader/template/sheet/actor/ship/tab/stats.html",
+
     "systems/rogue-trader/template/sheet/mental-disorder.html",
     "systems/rogue-trader/template/sheet/aptitude.html",
     "systems/rogue-trader/template/sheet/malignancy.html",
@@ -40,6 +49,7 @@ function preloadHandlebarsTemplates() {
     "systems/rogue-trader/template/sheet/weapon-modification.html",
     "systems/rogue-trader/template/sheet/ammunition.html",
     "systems/rogue-trader/template/sheet/force-field.html",
+    "systems/rogue-trader/template/sheet/shipHull.html",
     "systems/rogue-trader/template/sheet/characteristics/information.html",
     "systems/rogue-trader/template/sheet/characteristics/left.html",
     "systems/rogue-trader/template/sheet/characteristics/name.html",

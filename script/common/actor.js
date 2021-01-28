@@ -2,9 +2,8 @@ export class DarkHeresyActor extends Actor {
 
     prepareData() {
         super.prepareData();
-        console.log("hello " + this.data.type)
         if(this.data.type == "npcship" || this.data.type == "playership") {
-            console.log("im a ship");
+            this._computeShipCharacteristics(this.data);
         }
         else {
             this._computeCharacteristics(this.data);
@@ -18,6 +17,19 @@ export class DarkHeresyActor extends Actor {
 
     }
 
+    _computeShipCharacteristics(data) {
+        let middle = Object.values(data.data.shipCharacteristics).length / 2;
+        let i = 0;
+        for(let shipCharacteristic of Object.values(data.data.shipCharacteristics)) {
+            shipCharacteristic.total = shipCharacteristic.base;
+            shipCharacteristic.bonus = Math.floor(shipCharacteristic.total / 10);
+            shipCharacteristic.isLeft = i < middle;
+            shipCharacteristic.isRight = i >= middle;
+            i++;
+        }
+        data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;
+
+    }
     _computeCharacteristics(data) {
         let middle = Object.values(data.data.characteristics).length / 2;
         let i = 0;

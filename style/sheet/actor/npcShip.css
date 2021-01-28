@@ -1,0 +1,35 @@
+.rogue-trader .npcShip {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.rogue-trader .npcShip .header .type,
+.rogue-trader .npcShip .header .faction {
+    flex-basis: 35%;
+}
+
+.rogue-trader .npcShip .header .threat-level,
+.rogue-trader .npcShip .header .subfaction {
+    flex-basis: 40%;
+}
+
+.rogue-trader .npcShip .header .crewPopulation,
+.rogue-trader .npcShip .header .crewMorale {
+    flex-basis: 23%;
+}
+
+.rogue-trader .npcShip .header .type select,
+.rogue-trader .npcShip .header .faction input,
+.rogue-trader .npcShip .header .threat-level input,
+.rogue-trader .npcShip .header .subfaction input {
+    width: 11em;
+    height: 22px;
+}
+
+.rogue-trader .npcShip .header .crewPopulation input,
+.rogue-trader .npcShip .header .crewMorale input {
+    width: 2em;
+    margin: 0 5px;
+}

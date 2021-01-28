@@ -85,11 +85,6 @@
       },
       "shipCharacteristics": {
         "shipCharacteristics": {
-          "speed": {
-            "label": "SHIP_CHARACTERISTIC.SPEED",
-            "short": "Spd",
-            "base": 0
-          },
           "manoeuvrability": {
             "label": "SHIP_CHARACTERISTIC.MANOEUVRABILITY",
             "short": "Mnvr",
@@ -97,47 +92,7 @@
           },
           "detection": {
             "label": "SHIP_CHARACTERISTIC.DETECTION",
-            "short": "Detect",
-            "base": 0
-          },
-          "voidShields": {
-            "label": "SHIP_CHARACTERISTIC.VOID_SHIELDS",
-            "short": "Shields",
-            "base": 0
-          },
-          "armour": {
-            "label": "SHIP_CHARACTERISTIC.ARMOUR",
-            "short": "AP",
-            "base": 0
-          },
-          "hullIntegrity": {
-            "label": "SHIP_CHARACTERISTIC.HULL_INTEGRITY",
-            "short": "HI",
-            "base": 0
-          },
-          "powerGeneration": {
-            "label": "SHIP_CHARACTERISTIC.POWER_GENERATION",
-            "short": "Pwr",
-            "base": 0
-          },
-          "space": {
-            "label": "SHIP_CHARACTERISTIC.SPACE",
-            "short": "Space",
-            "base": 0
-          },
-          "turretRating": {
-            "label": "SHIP_CHARACTERISTIC.TURRET_RATING",
-            "short": "TR",
-            "base": 0
-          },
-          "weaponCapacity": {
-            "label": "SHIP_CHARACTERISTIC.WEAPON_CAPACITY",
-            "short": "Gun Cap",
-            "base": 0
-          },
-          "shipPoints": {
-            "label": "SHIP_CHARACTERISTIC.SHIP_POINTS",
-            "short": "SP",
+            "short": "Det",
             "base": 0
           }
         }
@@ -1115,6 +1070,31 @@
           "class": "bound",
           "cost": 0
         }
+      },
+      "hullIntegrity": {
+        "hullIntegrity": {
+          "max": 0,
+          "value": 0,
+          "critical": 0
+        }
+      },
+      "crewMorale": {
+        "crewMorale":{
+          "max": 0,
+          "value": 0
+        }
+      },
+      "crewPopulation": {
+        "crewPopulation": {
+          "max": 0,
+          "value": 0
+        }
+      },
+      "crewSkill": {
+        "crewSkill": {
+          "max": 0,
+          "value": 0
+        }
       }
     },
     "acolyte": {
@@ -1178,16 +1158,22 @@
     "playership": {
       "templates": [
         "shipCharacteristics",
-        "shipInitiative"
-      ],
-      "hullType": "frigate"
+        "shipInitiative",
+        "hullIntegrity",
+        "crewMorale",
+        "crewPopulation",
+        "crewSkill"
+      ]
     },
     "npcship": {
       "templates": [
       "shipCharacteristics",
-      "shipInitiative"
-      ],
-      "hullType": "frigate"
+      "shipInitiative",
+      "hullIntegrity",
+      "crewMorale",
+      "crewPopulation",
+      "crewSkill"
+      ]
     }
   },
   "Item": {
@@ -1211,7 +1197,8 @@
       "weapon",
       "weaponModification",
       "shipComponent",
-      "shipWeapon"
+      "shipWeapon",
+      "shipHull"
     ],
     "templates": {
       "equipment": {
@@ -1223,6 +1210,30 @@
       "itemDescription": {
         "description": "",
         "source": ""
+      },
+      "shipHull": {
+        "hullType": "",
+        "hullDescription": "",
+        "hullDimensionsLength": 0,
+        "hullDimensionsAbeam": 0,
+        "hullMass": 0,
+        "hullCrew": 0,
+        "hullAcceleration": 0,
+        "hullSpeed": 0,
+        "hullManoeuvrability": 0,
+        "hullDetection": 0,
+        "hullIntegrity": 0,
+        "hullArmour": 0,
+        "hullTurretRating": 0,
+        "hullSpace": 0,
+        "hullShipPoints": 0,
+        "hullProwWeaponCap": 0,
+        "hullPortWeaponCap": 0,
+        "hullStarboardWeaponCap": 0,
+        "hullDorsalWeaponCap": 0,
+        "hullKeelWeaponCap": 0
+
+
       }
     },
     "ammunition": {

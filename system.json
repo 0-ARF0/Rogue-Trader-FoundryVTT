@@ -47,7 +47,17 @@
     "style/sheet/actor/tab/psychic-powers.css",
     "style/sheet/actor/tab/gear.css",
     "style/sheet/actor/tab/progression.css",
-    "style/sheet/actor/tab/notes.css"
+    "style/sheet/actor/tab/notes.css",
+    "style/sheet/actor/ship.css",
+    "style/sheet/actor/npcship.css",
+    "style/sheet/actor/playership.css",
+    "style/sheet/actor/ship/tab/abilities.css",
+    "style/sheet/actor/ship/tab/combat.css",
+    "style/sheet/actor/ship/tab/components.css",
+    "style/sheet/actor/ship/tab/crew.css",
+    "style/sheet/actor/ship/tab/notes.css",
+    "style/sheet/actor/ship/tab/npc-notes.css",
+    "style/sheet/actor/ship/tab/npc-stats.css"
   ],
   "packs": [
     {
