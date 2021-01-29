@@ -35,6 +35,7 @@
     "style/sheet/weapon-modification.css",
     "style/sheet/ammunition.css",
     "style/sheet/force-field.css",
+    "style/sheet/shipHull.css",
 
     "style/sheet/actor/actor.css",
     "style/sheet/actor/acolyte.css",

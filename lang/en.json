@@ -273,13 +273,29 @@
   "SHIP_CHARACTERISTIC.SHIP_POINTS": "Ship Points",
 
   "SHIP_HULL.NAME": "Name",
-  "SHIP_HULL.TYPE": "Hull Type",
+  "SHIP_HULL.TYPE": "Type",
 
-  "SHIP_TYPE.TRANSPORT": "Transport",
-  "SHIP_TYPE.RAIDER": "Raider",
-  "SHIP_TYPE.FRIGATE": "Frigate",
-  "SHIP_TYPE.LIGHT_CRUISER": "Light Cruiser",
-  "SHIP_TYPE.CRUISER": "Cruiser",
+  "SHIP_HULL.TRANSPORT": "Transport",
+  "SHIP_HULL.RAIDER": "Raider",
+  "SHIP_HULL.FRIGATE": "Frigate",
+  "SHIP_HULL.LIGHT_CRUISER": "Light Cruiser",
+  "SHIP_HULL.CRUISER": "Cruiser",
+
+  "SHIP_HULL.SPEED": "Speed",
+  "SHIP_HULL.MANOEUVRABILITY": "Manoeuvrability",
+  "SHIP_HULL.DETECTION": "Detection",
+  "SHIP_HULL.INTEGRITY": "Integrity",
+  "SHIP_HULL.ARMOUR": "Armour",
+  "SHIP_HULL.SPACE": "Space",
+  "SHIP_HULL.SHIP_POINTS": "Ship Points",
+
+  "SHIP_HULL.PROW": "Prow",
+  "SHIP_HULL.PORT": "Port",
+  "SHIP_HULL.STARBOARD": "Starboard",
+  "SHIP_HULL.DORSAL": "Dorsal",
+  "SHIP_HULL.KEEL": "Keel",
+  "SHIP_HULL.AFT": "Aft",
+
 
   "SKILL.ACROBATICS": "Acrobatics",
   "SKILL.AWARENESS": "Awareness",
@@ -402,6 +418,7 @@
   "TITLE.POWER_GENERATION": "POWER GENERATION",
   "TITLE.HULL_INTEGRITY": "HULL INTEGRITY",
   "TITLE.SHIP_CHARACTERISTICS": "SHIP CHARACTERISTICS",
+  "TITLE.WEAPON_CAPACITY": "WEAPON CAPACITY",
 
   "WEAPON.HEADER": "Weapon",
   "WEAPON.NAME": "Name",

@@ -5,8 +5,8 @@ export class ShipHullSheet extends DarkHeresyItemSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["rogue-trader", "sheet", "shipHull"],
             template: "systems/rogue-trader/template/sheet/shipHull.html",
-            width: 500,
-            height: 369,
+            width: 360,
+            height: 500,
             resizable: false,
             tabs: [
                 {

@@ -1231,9 +1231,8 @@
         "hullPortWeaponCap": 0,
         "hullStarboardWeaponCap": 0,
         "hullDorsalWeaponCap": 0,
-        "hullKeelWeaponCap": 0
-
-
+        "hullKeelWeaponCap": 0,
+        "hullRearWeaponCap": 0
       }
     },
     "ammunition": {

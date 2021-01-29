@@ -1,0 +1,36 @@
+.rogue-trader.shipHull .notes-editor {
+    height: 165px;
+    max-height: 165px;
+}
+
+.rogue-trader.shipHull .stats {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0%;
+    margin: 0 2px;
+}
+
+.rogue-trader.shipHull .stats.border {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 48%;
+    justify-content: center;
+}
+
+
+.rogue-trader.shipHull .stats-row {
+    margin-right: 5px;
+}
+
+.rogue-trader.shipHull .stats-row label {
+    flex-basis: 100%;
+    justify-content: center;
+}
+.rogue-trader.shipHull .stats-row input {
+    width: 3em;
+}
+
+
+.rogue-trader.shipHull .stat.hullType select {
+    width: 8em;
+}
