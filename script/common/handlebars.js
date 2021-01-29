@@ -278,6 +278,24 @@ function registerHandlebarsHelpers() {
   });
 }
 
+Handlebars.registerHelper("hullType", function (hullType) {
+  hullType = normalize(hullType, "frigate");
+  switch (hullType) {
+    case "transport":
+      return game.i18n.localize("SHIP_HULL.TRANSPORT");
+    case "raider":
+      return game.i18n.localize("SHIP_HULL.RAIDER");
+    case "frigate":
+      return game.i18n.localize("SHIP_HULL.FRIGATE");
+    case "light cruiser":
+      return game.i18n.localize("SHIP_HULL.LIGHT_CRUISER");
+    case "cruiser":
+      return game.i18n.localize("SHIP_HULL.CRUISER");
+    default:
+      return game.i18n.localize("SHIP_HULL.FRIGATE");
+  }
+});
+
 function normalize(data, defaultValue) {
   if (typeof data === "string") {
     return data.toLowerCase();

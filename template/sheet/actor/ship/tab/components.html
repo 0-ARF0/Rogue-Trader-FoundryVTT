@@ -3,15 +3,8 @@
         <h1>{{localize "TITLE.SHIP_HULL"}}</h1>
         <div class="item-list">
             <div class="flex header">
-                <b class="name">{{localize SHIP_HULL.NAME}}</b>
-                <b class="hullType">{{localize SHIP_HULL.TYPE}}</b>
-                <b class="manoeuvrability">{{localize SHIP_HULL.MANOEUVRABILITY}}</b>
-                <b class="detection">{{localize SHIP_HULL.DETECTION}}</b>
-                <b class="integrity">{{localize SHIP_HULL.INTEGRITY}}</b>
-                <b class="armour">{{localize SHIP_HULL.ARMOUR}}</b>
-                <b class="turretRating">{{localize SHIP_HULL.TURRETRATING}}</b>
-                <b class="space">{{localize SHIP_HULL.SPACE}}</b>
-                <b class="shipPoints">{{localize SHIP_HULL.SHIP_POINTS}}</b>
+                <b class="name">{{localize "SHIP_HULL.NAME"}}</b>
+                <b class="hullType">{{localize "SHIP_HULL.TYPE"}}</b>
             </div>
             <div class="items">
                 {{#each actor.items as |item|}}
@@ -24,13 +17,6 @@
                         <div>{{item.name}}</div>
                     </div>
                     <div class="hullType">{{hullType item.data.hullType}}</div>
-                    <div class="manoeuvrability">{{item.data.hullManoeuvrability}}</div>
-                    <div class="detection">{{damageType item.data.hullDetection}}</div>
-                    <div class="integrity">{{clip item.data.hullIntegrity}}</div>
-                    <div class="armour">{{item.datahullArmour}}</div>
-                    <div class="turretRating">{{item.data.hullTurretRating}}</div>
-                    <div class="space">{{item.data.hullSpace}}</div>
-                    <div class="shipPoints">{{item.data.hullShipPoints}}</div>
                     <div class="button">
                         <a class="item-control item-delete" title="Delete Hull"><i class="fas fa-trash"></i></a>
                     </div>

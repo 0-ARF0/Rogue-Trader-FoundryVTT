@@ -138,5 +138,24 @@
         {{#if isAptitude}}
         <p><strong>{{localize "HEADER.DESCRIPTION"}}:</strong> {{{data.description}}}</p>
         {{/if}}
+
+        {{#if isShipHull}}
+        <p><strong>{{localize "SHIP_HULL.TYPE"}}</strong> {{{data.hullType}}}</p>
+        <p><strong>{{localize "SHIP_HULL.SPEED"}}</strong> {{{data.hullSpeed}}}</p>
+        <p><strong>{{localize "SHIP_HULL.MANOEUVRABILITY"}}</strong> {{{data.hullManoeuvrability}}}</p>
+        <p><strong>{{localize "SHIP_HULL.DETECTION"}}</strong> {{{data.hullDetection}}}</p>
+        <p><strong>{{localize "SHIP_HULL.INTEGRITY"}}</strong> {{{data.hullIntegrity}}}</p>
+        <p><strong>{{localize "SHIP_HULL.ARMOUR"}}</strong> {{{data.hullArmour}}}</p>
+        <p><strong>{{localize "SHIP_HULL.SPACE"}}</strong> {{{data.hullSpace}}}</p>
+        <p><strong>{{localize "SHIP_HULL.SHIP_POINTS"}}</strong> {{{data.hullShipPoints}}}</p>
+        <p></p>
+        <p><strong>Weapons:</strong></p>
+        <p><strong>{{localize "SHIP_HULL.PROW"}}</strong> {{{data.hullProwWeaponCap}}}</p>
+        <p><strong>{{localize "SHIP_HULL.PORT"}}</strong> {{{data.hullPortWeaponCap}}}</p>
+        <p><strong>{{localize "SHIP_HULL.STARBOARD"}}</strong> {{{data.hullStarboardWeaponCap}}}</p>
+        <p><strong>{{localize "SHIP_HULL.DORSAL"}}</strong> {{{data.hullDorsalWeaponCap}}}</p>
+        <p><strong>{{localize "SHIP_HULL.KEEL"}}</strong> {{{data.hullKeelWeaponCap}}}</p>
+        <p><strong>{{localize "SHIP_HULL.AFT"}}</strong> {{{data.hullAftWeaponCap}}}</p>
+        {{/if}}
     </div>
 </div>

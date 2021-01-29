@@ -4,6 +4,7 @@ export class DarkHeresyActor extends Actor {
         super.prepareData();
         if(this.data.type == "npcship" || this.data.type == "playership") {
             this._computeShipCharacteristics(this.data);
+            this._computeShipItems(this.data);
         }
         else {
             this._computeCharacteristics(this.data);
@@ -73,6 +74,11 @@ export class DarkHeresyActor extends Actor {
             }
         }
     }
+    _computeShipItems(data) {
+        for (let item of Object.values(data.items)) {
+            item.isShipHull = item.type === "shipHull";
+            }
+        }
 
     _computeItems(data) {
         let encumbrance = 0;

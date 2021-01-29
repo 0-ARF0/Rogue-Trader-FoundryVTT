@@ -3,21 +3,24 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex-basis: 100%;
-
 }
 
 .rogue-trader .components .ship-hull .item-list .header {
-    margin-top: 5px;
-
+    margin-top: 3px;
 }
 
-.rogue-trader .components .ship-hull .item-list .name {
+.rogue-trader .components .ship-hull .item-list .header .name {
     flex-basis: 30%;
     text-align: center;
     align-items: center;
-
 }
 
+.rogue-trader .components .ship-hull .item-list .header .hullType {
+    flex-basis: 30%;
+    text-align: center;
+    align-items: center;
+}
+/*
 .rogue-trader .components .ship-hull .item-list .items {
     display: flex;
     flex-direction: row;
@@ -183,4 +186,4 @@
 
 .rogue-trader .gear .all-gear .item-list .items .gear {
     width: 100%;
-}
+}*/
