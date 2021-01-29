@@ -30,3 +30,33 @@
     max-height: 241px;
     height: 241px;
 }
+
+.rogue-trader .abilities .ship-characteristics {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    justify-content: space-between;
+}
+
+.rogue-trader .abilities .ship-characteristics .information {
+    display: flex;
+    margin-top: 5px;
+}
+
+.rogue-trader .abilities .ship-characteristics .information label {
+    flex-basis: 60%;
+}
+
+.rogue-trader .abilities .ship-characteristics .information input {
+    text-align: center;
+    flex-basis: 25%;
+}
+
+.rogue-trader .abilities .ship-characteristics .information select {
+    flex-basis: 45%;
+}
+
+.rogue-trader .abilities .ship-characteristics .information.initiative label {
+    flex-basis: 30%;
+}

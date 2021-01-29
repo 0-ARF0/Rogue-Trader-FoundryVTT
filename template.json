@@ -88,12 +88,14 @@
           "manoeuvrability": {
             "label": "SHIP_CHARACTERISTIC.MANOEUVRABILITY",
             "short": "Mnvr",
-            "base": 0
+            "base": 0,
+            "value": 0
           },
           "detection": {
             "label": "SHIP_CHARACTERISTIC.DETECTION",
             "short": "Det",
-            "base": 0
+            "base": 0,
+            "value": 0
           }
         }
       },
@@ -1079,7 +1081,7 @@
         }
       },
       "crewMorale": {
-        "crewMorale":{
+        "crewMorale": {
           "max": 0,
           "value": 0
         }
@@ -1167,12 +1169,12 @@
     },
     "npcship": {
       "templates": [
-      "shipCharacteristics",
-      "shipInitiative",
-      "hullIntegrity",
-      "crewMorale",
-      "crewPopulation",
-      "crewSkill"
+        "shipCharacteristics",
+        "shipInitiative",
+        "hullIntegrity",
+        "crewMorale",
+        "crewPopulation",
+        "crewSkill"
       ]
     }
   },
@@ -1210,29 +1212,6 @@
       "itemDescription": {
         "description": "",
         "source": ""
-      },
-      "shipHull": {
-        "hullType": "",
-        "hullDescription": "",
-        "hullDimensionsLength": 0,
-        "hullDimensionsAbeam": 0,
-        "hullMass": 0,
-        "hullCrew": 0,
-        "hullAcceleration": 0,
-        "hullSpeed": 0,
-        "hullManoeuvrability": 0,
-        "hullDetection": 0,
-        "hullIntegrity": 0,
-        "hullArmour": 0,
-        "hullTurretRating": 0,
-        "hullSpace": 0,
-        "hullShipPoints": 0,
-        "hullProwWeaponCap": 0,
-        "hullPortWeaponCap": 0,
-        "hullStarboardWeaponCap": 0,
-        "hullDorsalWeaponCap": 0,
-        "hullKeelWeaponCap": 0,
-        "hullRearWeaponCap": 0
       }
     },
     "ammunition": {
@@ -1400,6 +1379,29 @@
       "templates": [
         "itemDescription"
       ]
+    },
+    "shipHull": {
+      "hullType": "",
+      "hullDescription": "",
+      "hullDimensionsLength": 0,
+      "hullDimensionsAbeam": 0,
+      "hullMass": 0,
+      "hullCrew": 0,
+      "hullAcceleration": 0,
+      "hullSpeed": 0,
+      "hullManoeuvrability": 0,
+      "hullDetection": 0,
+      "hullIntegrity": 0,
+      "hullArmour": 0,
+      "hullTurretRating": 0,
+      "hullSpace": 0,
+      "hullShipPoints": 0,
+      "hullProwWeaponCap": 0,
+      "hullPortWeaponCap": 0,
+      "hullStarboardWeaponCap": 0,
+      "hullDorsalWeaponCap": 0,
+      "hullKeelWeaponCap": 0,
+      "hullAftWeaponCap": 0
     }
   }
 }

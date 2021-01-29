@@ -48,29 +48,28 @@
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.DETECTION"}}</label>
-                            <input name="data.hullDetection" type="number"
-                                value="{{data.hullDetection}}" data-dtype="Number" />
+                            <input name="data.hullDetection" type="number" value="{{data.hullDetection}}"
+                                data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.INTEGRITY"}}</label>
-                            <input name="data.hullIntegrity" type="number"
-                                value="{{data.hullIntegrity}}" data-dtype="Number" />
+                            <input name="data.hullIntegrity" type="number" value="{{data.hullIntegrity}}"
+                                data-dtype="Number" />
                             </select>
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.ARMOUR"}}</label>
-                            <input name="data.hullArmour" type="number"
-                                value="{{data.hullArmour}}" data-dtype="Number" />
+                            <input name="data.hullArmour" type="number" value="{{data.hullArmour}}"
+                                data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.SPACE"}}</label>
-                            <input name="data.hullSpace" type="number"
-                                value="{{data.hullSpace}}" data-dtype="Number" />
+                            <input name="data.hullSpace" type="number" value="{{data.hullSpace}}" data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.SHIP_POINTS"}}</label>
-                            <input name="data.hullShipPoints" type="number"
-                                value="{{data.hullShipPoints}}" data-dtype="Number" />
+                            <input name="data.hullShipPoints" type="number" value="{{data.hullShipPoints}}"
+                                data-dtype="Number" />
                         </div>
                     </div>
                 </div>
@@ -79,13 +78,13 @@
                     <div class="stats">
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.PROW"}}</label>
-                            <input name="data.hullProwWeaponCap" type="number"
-                                value="{{data.hullProwWeaponCap}}" data-dtype="Number" />
+                            <input name="data.hullProwWeaponCap" type="number" value="{{data.hullProwWeaponCap}}"
+                                data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.PORT"}}</label>
-                            <input name="data.hullPortWeaponCap" type="number"
-                                value="{{data.hullPortWeaponCap}}" data-dtype="Number" />
+                            <input name="data.hullPortWeaponCap" type="number" value="{{data.hullPortWeaponCap}}"
+                                data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.STARBOARD"}}</label>
@@ -94,32 +93,31 @@
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.DORSAL"}}</label>
-                            <input name="data.hullDorsalWeaponCap" type="number"
-                                value="{{data.hullDorsalWeaponCap}}" data-dtype="Number" />
+                            <input name="data.hullDorsalWeaponCap" type="number" value="{{data.hullDorsalWeaponCap}}"
+                                data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.KEEL"}}</label>
-                            <input name="data.hullKeelWeaponCap" type="number"
-                                value="{{data.hullKeelWeaponCap}}" data-dtype="Number" />
+                            <input name="data.hullKeelWeaponCap" type="number" value="{{data.hullKeelWeaponCap}}"
+                                data-dtype="Number" />
                         </div>
                         <div class="stats-row">
                             <label>{{localize "SHIP_HULL.AFT"}}</label>
-                            <input name="data.hullAftWeaponCap" type="number"
-                                value="{{data.hullAftWeaponCap}}" data-dtype="Number" />
+                            <input name="data.hullAftWeaponCap" type="number" value="{{data.hullAftWeaponCap}}"
+                                data-dtype="Number" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="tab" data-group="primary" data-tab="notes">
-        <div class="notes-editor border">
-            <h1>{{localize "TITLE.NOTES"}}</h1>
-            <div style="height: 132px; width: 100%">
-                {{editor content=data.description target="data.description" button=true owner=owner
-                editable=editable}}
+        <div class="tab" data-group="primary" data-tab="notes">
+            <div class="notes-editor border">
+                <h1>{{localize "TITLE.NOTES"}}</h1>
+                <div style="height: 275px; width: 100%">
+                    {{editor content=data.description target="data.description" button=true owner=owner
+                    editable=editable}}
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </form>

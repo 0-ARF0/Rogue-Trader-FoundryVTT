@@ -20,12 +20,18 @@
     flex-basis: 23%;
 }
 
-.rogue-trader .npcShip .header .type select,
+.rogue-trader .npcShip .header .type input,
 .rogue-trader .npcShip .header .faction input,
 .rogue-trader .npcShip .header .threat-level input,
 .rogue-trader .npcShip .header .subfaction input {
     width: 11em;
     height: 22px;
+}
+
+.rogue-trader .npcShip .header .crewPopulation input,
+.rogue-trader .npcShip .header .crewMorale input {
+    width: 2em;
+    margin: 0 5px;
 }
 
 .rogue-trader .npcShip .header .crewPopulation input,

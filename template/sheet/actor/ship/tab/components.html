@@ -1,5 +1,45 @@
 <div class="flex wrap components">
-    <div class="ship-component-limits border">
+    <div class="ship-hull border">
+        <h1>{{localize "TITLE.SHIP_HULL"}}</h1>
+        <div class="item-list">
+            <div class="flex header">
+                <b class="name">{{localize SHIP_HULL.NAME}}</b>
+                <b class="hullType">{{localize SHIP_HULL.TYPE}}</b>
+                <b class="manoeuvrability">{{localize SHIP_HULL.MANOEUVRABILITY}}</b>
+                <b class="detection">{{localize SHIP_HULL.DETECTION}}</b>
+                <b class="integrity">{{localize SHIP_HULL.INTEGRITY}}</b>
+                <b class="armour">{{localize SHIP_HULL.ARMOUR}}</b>
+                <b class="turretRating">{{localize SHIP_HULL.TURRETRATING}}</b>
+                <b class="space">{{localize SHIP_HULL.SPACE}}</b>
+                <b class="shipPoints">{{localize SHIP_HULL.SHIP_POINTS}}</b>
+            </div>
+            <div class="items">
+                {{#each actor.items as |item|}}
+                {{#if item.isShipHull}}
+                <div class="hull item flex row" data-item-id="{{item._id}}">
+                    <div class="flex name item-edit">
+                        <div class="image-container">
+                            <div class="image" style="background-image: url('{{item.img}}')"></div>
+                        </div>
+                        <div>{{item.name}}</div>
+                    </div>
+                    <div class="hullType">{{hullType item.data.hullType}}</div>
+                    <div class="manoeuvrability">{{item.data.hullManoeuvrability}}</div>
+                    <div class="detection">{{damageType item.data.hullDetection}}</div>
+                    <div class="integrity">{{clip item.data.hullIntegrity}}</div>
+                    <div class="armour">{{item.datahullArmour}}</div>
+                    <div class="turretRating">{{item.data.hullTurretRating}}</div>
+                    <div class="space">{{item.data.hullSpace}}</div>
+                    <div class="shipPoints">{{item.data.hullShipPoints}}</div>
+                    <div class="button">
+                        <a class="item-control item-delete" title="Delete Hull"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+        </div>
+    </div>
+<!--    <div class="ship-component-limits border">
         <h1>{{localize "TITLE.SHIP_COMPONENT_LIMITS"}}</h1>
         <div class="information">
             <div class="item-list">
@@ -279,5 +319,5 @@
                 {{/each}}
             </div>
         </div>
-    </div>
+    </div>-->
 </div>

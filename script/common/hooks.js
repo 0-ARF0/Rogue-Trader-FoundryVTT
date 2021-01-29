@@ -43,8 +43,8 @@ Hooks.once("init", () => {
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("rogue-trader", AcolyteSheet, { types: ["acolyte"], makeDefault: true });
     Actors.registerSheet("rogue-trader", NpcSheet, { types: ["npc"], makeDefault: true });
-    Actors.registerSheet("rogue-trader", PlayerShipSheet, { types: ["playership"], makeDefault: true});
-    Actors.registerSheet("rogue-trader", NPCShipSheet, { types: ["npcship"], makeDefault: true});
+    Actors.registerSheet("rogue-trader", PlayerShipSheet, { types: ["playership"], makeDefault: true });
+    Actors.registerSheet("rogue-trader", NPCShipSheet, { types: ["npcship"], makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("rogue-trader", WeaponSheet, { types: ["weapon"], makeDefault: true });
     Items.registerSheet("rogue-trader", AmmunitionSheet, { types: ["ammunition"], makeDefault: true });
@@ -80,14 +80,35 @@ Hooks.once("ready", () => {
     migrateWorld();
 });
 
+Hooks.on("preCreateItem", (createData) => {
+    if (createData.type === "shipHull") {
+        mergeObject(createData, {
+            "img": "systems/rogue-trader/asset/icons/ship/shipHull.png"
+        });
+    }
+});
+
+Hooks.on("preCreateOwnedItem", (actorData, itemData) => {
+    console.log("Attempting to create an item of type " + itemData.type);
+    if (itemData.type === "shipHull") {
+        for (let x of actorData.items) {
+            if (x.type === "shipHull") {
+                console.log("Ship Hull already found!");
+                return false;
+            }
+        }
+
+    }
+});
+
 Hooks.on("preCreateActor", (createData) => {
     mergeObject(createData, {
-        "token.bar1" :{ "attribute" : "wounds" },
-        "token.bar2" :{ "attribute" : "fatigue" },
-        "token.displayName" : CONST.TOKEN_DISPLAY_MODES.HOVER,
-        "token.displayBars" : CONST.TOKEN_DISPLAY_MODES.ALWAYS,
-        "token.disposition" : CONST.TOKEN_DISPOSITIONS.NEUTRAL,
-        "token.name" : createData.name
+        "token.bar1": { "attribute": "wounds" },
+        "token.bar2": { "attribute": "fatigue" },
+        "token.displayName": CONST.TOKEN_DISPLAY_MODES.HOVER,
+        "token.displayBars": CONST.TOKEN_DISPLAY_MODES.ALWAYS,
+        "token.disposition": CONST.TOKEN_DISPOSITIONS.NEUTRAL,
+        "token.name": createData.name
     });
     if (createData.type === "acolyte") {
         createData.token.vision = true;

@@ -13,21 +13,23 @@ export class DarkHeresyActor extends Actor {
             this._computeMovement(this.data);
             this._computeItems(this.data);
         }
-        
 
     }
 
     _computeShipCharacteristics(data) {
-        let middle = Object.values(data.data.shipCharacteristics).length / 2;
-        let i = 0;
-        for(let shipCharacteristic of Object.values(data.data.shipCharacteristics)) {
-            shipCharacteristic.total = shipCharacteristic.base;
-            shipCharacteristic.bonus = Math.floor(shipCharacteristic.total / 10);
-            shipCharacteristic.isLeft = i < middle;
-            shipCharacteristic.isRight = i >= middle;
-            i++;
+       // for(let x of Object.values(data.data.shipCharacteristics.detection)) {
+       //     console.log(x);
+
+        let detection = 0;
+        for (let hull of Object.values(data.items)) {
+            console.log("listing item: " + hull.type);
+            if (hull.data.hasOwnProperty('hullDetection')) {
+                detection += hull.data.hullDetection;
+            }
         }
-        data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;
+        console.log("Final detection is " + detection);
+        //data.data.detection = 4;
+        //data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;
 
     }
     _computeCharacteristics(data) {

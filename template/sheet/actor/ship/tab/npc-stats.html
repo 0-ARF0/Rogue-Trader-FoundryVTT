@@ -1,19 +1,9 @@
 <div class="flex wrap stats">
     <div class="ship-characteristics border">
         <h1>{{localize "TITLE.SHIP_CHARACTERISTICS"}}</h1>
-        <div class="left">
-            {{#each data.shipCharacteristics as |shipCharacteristic key|}}
-                {{#if shipCharacteristic.isLeft}}
-                    {{> systems/rogue-trader/template/sheet/shipCharacteristics/left.html shipCharacteristic=cshipCharacteristic key=key}}
-                {{/if}}
-            {{/each}}
-        </div>
-        <div class="right">
-            {{#each data.shipCharacteristics as |shipCharacteristic key|}}
-                {{#if shipCharacteristic.isRight}}
-                    {{> systems/rogue-trader/template/sheet/shipCharacteristics/right.html shipCharacteristic=shipCharacteristic key=key}}
-                {{/if}}
-            {{/each}}
+        <div class ="information">
+            <label>{{localize "SHIP_HULL.DETECTION"}}</label>
+            <input type="number" value="{{data.data.shipCharacteristics.detection}}" data-dtype="Number" disabled />
         </div>
     </div>
     <div class="abilities border">
