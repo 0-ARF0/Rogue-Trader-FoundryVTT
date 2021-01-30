@@ -13,7 +13,7 @@
                     <div class="header-row" style="height: 22px">
                         <div class="type">
                             <label>{{localize "BIO.TYPE"}}</label>
-                            <input type="number" value="{{data.type}}" data-dtype="Number" disabled />
+                            <input type="text" value="{{data.shipCharacteristics.type.typeName}}" data-dtype="text" disabled />
                         </div>
                         <div class="threat-level">
                             <label>{{localize "BIO.THREAT_LEVEL"}}</label>
@@ -21,9 +21,9 @@
                         </div>
                         <div class="crewPopulation">
                             <label>{{localize "SHIP.CREW_POPULATION"}}</label>
-                            <input style="margin-left: 0px" name="data.crewPopulation.value" type="number" value="{{data.crewPopulation.value}}" data-dtype="Number" />
+                            <input style="margin-left: 0px" name="data.shipCharacteristics.crewPopulation.value" type="number" value="{{data.shipCharacteristics.crewPopulation.value}}" data-dtype="Number" />
                             /
-                            <input name="data.crewPopulation.max" type="number" value="{{data.crewPopulation.max}}" data-dtype="Number" />
+                            <input name="data.crewPopulation.max" type="number" value="{{data.shipCharacteristics.crewPopulation.max}}" data-dtype="Number" disabled />
                         </div>
                     </div>
                     <div class="header-row">
@@ -37,9 +37,9 @@
                         </div>
                         <div class="crewMorale">
                             <label>{{localize "SHIP.CREW_MORALE"}}</label>
-                            <input style="margin-left: 16px" name="data.crewMorale.value" type="number" value="{{data.crewMorale.value}}" data-dtype="Number" />
+                            <input style="margin-left: 16px" name="data.shipCharacteristics.crewMorale.value" type="number" value="{{data.shipCharacteristics.crewMorale.value}}" data-dtype="Number" />
                             /
-                            <input name="data.crewMorale.max" type="number" value="{{data.crewMorale.max}}" data-dtype="Number" />
+                            <input name="data.crewMorale.max" type="number" value="{{data.shipCharacteristics.crewMorale.max}}" data-dtype="Number" disabled />
                         </div>
                     </div>
                 </div>

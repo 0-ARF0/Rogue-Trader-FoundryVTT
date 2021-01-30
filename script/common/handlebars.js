@@ -287,7 +287,7 @@ Handlebars.registerHelper("hullType", function (hullType) {
       return game.i18n.localize("SHIP_HULL.RAIDER");
     case "frigate":
       return game.i18n.localize("SHIP_HULL.FRIGATE");
-    case "light cruiser":
+    case "lightcruiser":
       return game.i18n.localize("SHIP_HULL.LIGHT_CRUISER");
     case "cruiser":
       return game.i18n.localize("SHIP_HULL.CRUISER");

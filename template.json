@@ -85,6 +85,11 @@
       },
       "shipCharacteristics": {
         "shipCharacteristics": {
+          "type": {
+            "label": "SHIP_CHARACTERISTIC.TYPE",
+            "short": "Type",
+            "typeName": ""
+          },
           "manoeuvrability": {
             "label": "SHIP_CHARACTERISTIC.MANOEUVRABILITY",
             "short": "Mnvr",
@@ -96,6 +101,34 @@
             "short": "Det",
             "base": 0,
             "value": 0
+          },
+          "space": {
+            "label": "SHIP_CHARACTERISTIC.SPACE",
+            "short": "Space",
+            "base": 0,
+            "value": 0,
+            "max": 0
+          },
+          "power": {
+            "label": "SHIP_CHARACTERISTIC.POWER",
+            "short": "Space",
+            "base": 0,
+            "value": 0,
+            "max": 0
+          },
+          "crewPopulation": {
+            "label": "SHIP_CHARACTERISTIC.CREW_POPULATION",
+            "short": "Pop",
+            "base": 100,
+            "value": 100,
+            "max": 100
+          },
+          "crewMorale": {
+            "label": "SHIP_CHARACTERISTIC.CREW_MORALE",
+            "short": "Morale",
+            "base": 100,
+            "value": 100,
+            "max": 100
           }
         }
       },
@@ -1162,8 +1195,6 @@
         "shipCharacteristics",
         "shipInitiative",
         "hullIntegrity",
-        "crewMorale",
-        "crewPopulation",
         "crewSkill"
       ],
       "hasHull": false
@@ -1173,8 +1204,6 @@
         "shipCharacteristics",
         "shipInitiative",
         "hullIntegrity",
-        "crewMorale",
-        "crewPopulation",
         "crewSkill"
       ],
       "hasHull": false
@@ -1381,6 +1410,22 @@
       "templates": [
         "itemDescription"
       ]
+    },
+    "shipComponent": {
+      "type": "",
+      "appropriateHullTypes": [],
+      "powerUse": 0,
+      "powerGenerated": 0,
+      "spaceUse": 0,
+      "spUse": 0,
+      "isPowered": false,
+      "isDamaged": false,
+      "isDestroyed": false,
+      "isDepressurized": false,
+      "isOnFire": false,
+      "isExposed": false,
+      "isExternal": false,
+      "isEssential": false
     },
     "shipHull": {
       "hullType": "",

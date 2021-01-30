@@ -2,7 +2,7 @@ export class DarkHeresyActor extends Actor {
 
     prepareData() {
         super.prepareData();
-        if(this.data.type == "npcship" || this.data.type == "playership") {
+        if (this.data.type == "npcship" || this.data.type == "playership") {
             this._computeShipCharacteristics(this.data);
             this._computeShipItems(this.data);
         }
@@ -18,17 +18,41 @@ export class DarkHeresyActor extends Actor {
     }
 
     _computeShipCharacteristics(data) {
-       // for(let x of Object.values(data.data.shipCharacteristics.detection)) {
-       //     console.log(x);
-
+        // for(let x of Object.values(data.data.shipCharacteristics.detection)) {
+        //     console.log(x);
+        data.data.shipCharacteristics.type.typeName = "NO HULL";
+        data.data.shipCharacteristics.crewPopulation.max = 100;
+        data.data.shipCharacteristics.crewPopulation.value = 100;
         let detection = 0;
-        for (let hull of Object.values(data.items)) {
-            console.log("listing item: " + hull.type);
-            if (hull.data.hasOwnProperty('hullDetection')) {
-                detection += hull.data.hullDetection;
+        let space = 0;
+        let spaceUsed = 0;
+        let powerUsed = 0;
+        let powerGenerated = 0;
+        for (let x of Object.values(data.items)) {
+            console.log("generating ship characteristics for item: " + x.type);
+
+            if (x.data.hasOwnProperty('hullType')) {
+                data.data.shipCharacteristics.type.typeName = x.data.hullType;
+            }
+            if (x.data.hasOwnProperty('hullDetection')) {
+                detection += x.data.hullDetection;
+            }
+            if (x.data.hasOwnProperty('hullSpace')) {
+                space += x.data.hullSpace;
+            }
+            if (x.data.hasOwnProperty('powerGenerated')) {
+                powerGenerated += x.data.powerGenerated;
+            }
+            if (x.data.hasOwnProperty('powerUsed')) {
+                powerUsed += x.data.powerUsed;
             }
         }
-        console.log("Final detection is " + detection);
+        data.data.shipCharacteristics.space.max = space;
+        data.data.shipCharacteristics.space.value = spaceUsed;
+
+        data.data.shipCharacteristics.power.max = powerGenerated;
+        data.data.shipCharacteristics.power.value = powerUsed;
+
         //data.data.detection = 4;
         //data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;
 
@@ -77,8 +101,12 @@ export class DarkHeresyActor extends Actor {
     _computeShipItems(data) {
         for (let item of Object.values(data.items)) {
             item.isShipHull = item.type === "shipHull";
+            if (item.isShipHull) {
+                data.data.hasHull = true;
+                console.log("set hasHull to true");
             }
         }
+    }
 
     _computeItems(data) {
         let encumbrance = 0;

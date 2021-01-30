@@ -89,46 +89,33 @@ Hooks.on("preCreateItem", (createData) => {
 });
 
 Hooks.on("preCreateOwnedItem", (actorData, itemData) => {
-    console.log("Attempting to create an item of type " + itemData.type);
     if(itemData.type === "shipHull") {
         if(actorData.data.type === "playership" || actorData.data.type === "npcship") {
-            if(!actorData.hasHull) {
-                actorData.hasHull = true;
+            if(!actorData.data.data.hasHull) {
+                actorData.data.data.hasHull = true;
                 return true;
             }
             else {
-                console.log("Ship Hull already found! Delete the old hull first!");
+                console.log(actorData.data.data.hasHull);
                 return false;
             }
         }
         else {
-            console.log("You can't put a ship hull on that type of actor!");
-            return false;
-        }
-    }
-    if (itemData.type === "shipHull" && (actorData.type === "playership" || actorData.type === "npcship")) {
-        if(actorData.hasHull == true ) {
-            console.log("Ship Hull already found!");
             return false;
         }
     }
 });
 
 Hooks.on("preDeleteOwnedItem", (actorData, itemData) => {
-    console.log("Attempting to delete an item of type " + itemData.type);
     if(itemData.type === "shipHull") {
         if(actorData.data.type === "playership" || actorData.data.type === "npcship") {
-            if(actorData.hasHull) {
-                actorData.hasHull = false;
+            if(actorData.data.data.hasHull == true) {
+                actorData.data.data.hasHull = false;
                 return true;
             }
             else {
-                console.log("Deleting a hull that doesn't exist huh? I can not allow this!!!");
                 return false;
             }
-        }
-        else {
-            console.log("How did you get a ship hull on a person! Oh well, it's gone now.");
         }
     }
 });

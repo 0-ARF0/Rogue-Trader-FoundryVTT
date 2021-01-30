@@ -23,27 +23,49 @@
                 </div>
                 {{/if}}
                 {{/each}}
-        </div>
-    </div>
-<!--    <div class="ship-component-limits border">
-        <h1>{{localize "TITLE.SHIP_COMPONENT_LIMITS"}}</h1>
-        <div class="information">
-            <div class="item-list">
-                <div class="flex header">
-                    <b class ="ship-points">{{localize "SHIP_CHARACTERISTIC.SHIP_POINTS"}}</b>
-                </div>
-                <div class="current">
-                    <label>{{localize "ENCUMBRANCE.CURRENT"}}</label>
-                    <input type="number" value="{{data.encumbrance.value}}" data-dtype="Number" disabled />
-                </div>
-                <div class="max">
-                    <label>{{localize "ENCUMBRANCE.MAX"}}</label>
-                    <input type="number" value="{{data.encumbrance.max}}" data-dtype="Number" disabled />
-                </div>
             </div>
         </div>
     </div>
-    <div class="all-gear border">
+    <div class="ship-component-limits border">
+        <h1>{{localize "TITLE.SPACE"}}</h1>
+        <div class="information">
+            <div class="current">
+                <label>{{localize "SHIP_CHARACTERISTIC.USED"}}</label>
+                <input type="number" value="{{data.shipCharacteristics.space.value}}" data-dtype="Number" disabled />
+            </div>
+            <div class="max">
+                <label>{{localize "SHIP_CHARACTERISTIC.MAX"}}</label>
+                <input type="number" value="{{data.shipCharacteristics.space.max}}" data-dtype="Number" disabled />
+            </div>
+        </div>
+        <h1 style="margin-top: 5px">{{localize "TITLE.POWER"}}</h1>
+        <div class="information">
+            <div class="current">
+                <label>{{localize "SHIP_CHARACTERISTIC.USED"}}</label>
+                <input type="number" value="{{data.shipCharacteristics.power.value}}" data-dtype="Number" disabled />
+            </div>
+            <div class="max">
+                <label>{{localize "SHIP_CHARACTERISTIC.MAX"}}</label>
+                <input type="number" value="{{data.shipCharacteristics.power.max}}" data-dtype="Number" disabled />
+            </div>
+        </div>
+    </div>
+    <div class="crew-damage border">
+        <h1>{{localize "TITLE.POPULATION"}}</h1>
+        <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.crewPopulation.value}}" data-dtype="Number" disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.crewPopulation.max}}" data-dtype="Number" disabled />
+        </div>
+        <h1 style="margin-top: 5px">{{localize "TITLE.MORALE"}}</h1>
+        <div class="information">
+            <input type="number" value="{{data.shipCharacteristics.crewMorale.value}}" data-dtype="Number" disabled />
+            /
+            <input type="number" value="{{data.shipCharacteristics.crewMorale.max}}" data-dtype="Number" disabled />
+        </div>
+    </div>
+</div>
+<!--    <div class="all-gear border">
         <h1>{{localize "TITLE.EQUIPMENT"}}</h1>
         <div class="item-list">
             <div class="flex header">
