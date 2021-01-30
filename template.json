@@ -1165,7 +1165,8 @@
         "crewMorale",
         "crewPopulation",
         "crewSkill"
-      ]
+      ],
+      "hasHull": false
     },
     "npcship": {
       "templates": [
@@ -1175,7 +1176,8 @@
         "crewMorale",
         "crewPopulation",
         "crewSkill"
-      ]
+      ],
+      "hasHull": false
     }
   },
   "Item": {
