@@ -67,7 +67,7 @@
     </div>
 
     <div class="ship-components border">
-        <h1>{{localize "TITLE.ESSENTIAL_COMPONENTS"}}</h1>
+        <h1>{{localize "TITLE.COMPONENTS"}}</h1>
         <div class="item-list">
             <div class="flex header">
                 <b class="name">{{localize "SHIP_COMPONENT.HEADER"}}</b>
@@ -82,26 +82,22 @@
             <div class="items">
                 {{#each actor.items as |item|}}
                 {{#if item.isShipComponent}}
-                {{#if item.isEssential}}
                 <div class="ship-components item flex row" data-item-id="{{item._id}}">
-                    <div class="flex name item-edit">
+                    <div class="flex name item-edit" style="flex-basis:40%;">
                         <div class="image-container">
                             <div class="image" style="background-image: url('{{item.img}}')"></div>
                         </div>
-                        <div>{{item.name}}</div>
+                        <div class="name">{{item.name}}</div>
                     </div>
-                    <div class="type">{{essentialComponentType item.data.type}}</div>
-                    <div class="damage">{{item.data.damage}}</div>
-                    <div class="type">{{damageType item.data.damageType}}</div>
-                    <div class="isExposed">{{exposedComponent item.data.isExposed}}</div>
-                    <div class="isExternal">{{externalComponent item.data.isExternal}}</div>
+                    <div class="type">{{componentType item.data.type}}</div>
+                    <div class="isExposed">{{isExposed item.data.isExposed}}</div>
+                    <div class="isExternal">{{isExternal item.data.isExternal}}</div>
                     <div class="status">{{componentStatus item.data.status}}</div>
                     <div class="environment">{{componentEnvironment item.data.environment}}</div>
                     <div class="button">
                         <a class="item-control item-delete" title="Delete Component"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
-                {{/if}}
                 {{/if}}
                 {{/each}}
             </div>

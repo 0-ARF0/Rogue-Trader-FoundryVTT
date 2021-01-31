@@ -101,6 +101,7 @@ export class DarkHeresyActor extends Actor {
     _computeShipItems(data) {
         for (let item of Object.values(data.items)) {
             item.isShipHull = item.type === "shipHull";
+            item.isShipComponent = item.type === "shipComponent";
             if (item.isShipHull) {
                 data.data.hasHull = true;
                 console.log("set hasHull to true");

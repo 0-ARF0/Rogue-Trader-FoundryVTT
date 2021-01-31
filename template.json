@@ -1418,6 +1418,8 @@
       "powerGenerated": 0,
       "spaceUse": 0,
       "spUse": 0,
+      "isExposed": false,
+      "isExternal": false,
       "status": 0,
       "environment": 0,
       "isEssential": false,

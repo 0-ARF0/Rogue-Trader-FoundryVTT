@@ -300,17 +300,17 @@ Handlebars.registerHelper("hullType", function (hullType) {
 Handlebars.registerHelper("componentType", function (componentType) {
   componentType = normalize(componentType, "supplemental");
   switch (componentType) {
-    case "plasmaDrives":
+    case "plasmadrives":
       return game.i18n.localize("SHIP_COMPONENT.PLASMA_DRIVES");
-    case "warpEngine":
+    case "warpengine":
       return game.i18n.localize("SHIP_COMPONENT.WARP_ENGINE");
-    case "voidShields":
+    case "voidshields":
       return game.i18n.localize("SHIP_COMPONENT.VOID_SHIELDS");
-    case "gellarField":
+    case "gellarfield":
       return game.i18n.localize("SHIP_COMPONENT.GELLAR_FIELD");
-    case "lifeSustainer":
+    case "lifesustainer":
       return game.i18n.localize("SHIP_COMPONENT.LIFE_SUSTAINER");
-    case "crewCompartments":
+    case "crewcompartments":
       return game.i18n.localize("SHIP_COMPONENT.CREW_COMPARTMENTS");
     case "bridge":
         return game.i18n.localize("SHIP_COMPONENT.BRIDGE");
@@ -323,16 +323,32 @@ Handlebars.registerHelper("componentType", function (componentType) {
   }
 });
 
+Handlebars.registerHelper("isExposed", function (isExposed) {
+  if (isExposed) {
+    return game.i18n.localize("BUTTON.YES");
+  } else {
+    return game.i18n.localize("BUTTON.NO");
+  }
+});
+
+Handlebars.registerHelper("isExternal", function (isExternal) {
+  if (isExternal) {
+    return game.i18n.localize("BUTTON.YES");
+  } else {
+    return game.i18n.localize("BUTTON.NO");
+  }
+});
+
 Handlebars.registerHelper("componentStatus", function (componentStatus) {
-  componentStatus = normalize(componentStatus, 0);
+  componentStatus = normalize(componentStatus, "0");
   switch (componentStatus) {
-    case 0:
+    case "0":
       return game.i18n.localize("SHIP_COMPONENT_STATUS.INTACT");
-    case 1:
+    case "1":
       return game.i18n.localize("SHIP_COMPONENT_STATUS.UNPOWERED");
-    case 2:
+    case "2":
       return game.i18n.localize("SHIP_COMPONENT_STATUS.DAMAGED");;
-    case 3:
+    case "3":
       return game.i18n.localize("SHIP_COMPONENT_STATUS.DESTROYED");
     default:
       return game.i18n.localize("SHIP_COMPONENT_STATUS.INTACT");
@@ -340,16 +356,16 @@ Handlebars.registerHelper("componentStatus", function (componentStatus) {
 });
 
 Handlebars.registerHelper("componentEnvironment", function (componentEnvironment) {
-  componentEnvironment = normalize(componentEnvironment, 0);
+  componentEnvironment = normalize(componentEnvironment, "0");
   switch (componentEnvironment) {
-    case 0:
-      return game.i18n.localize("SHIP_COMPONENT_STATUS.ACCEPTABLE");
-    case 1:
-      return game.i18n.localize("SHIP_COMPONENT_STATUS.DEPRESSURIZED");
-    case 2:
-      return game.i18n.localize("SHIP_COMPONENT_STATUS.FIRE");;
+    case "0":
+      return game.i18n.localize("SHIP_COMPONENT_ENVIRONMENT.ACCEPTABLE");
+    case "1":
+      return game.i18n.localize("SHIP_COMPONENT_ENVIRONMENT.DEPRESSURIZED");
+    case "2":
+      return game.i18n.localize("SHIP_COMPONENT_ENVIRONMENT.FIRE");
     default:
-      return game.i18n.localize("SHIP_COMPONENT_STATUS.ACCEPTABLE");
+      return game.i18n.localize("SHIP_COMPONENT_ENVIRONMENT.ACCEPTABLE");
   }
 });
 

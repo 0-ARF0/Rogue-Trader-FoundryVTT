@@ -146,13 +146,58 @@
 }
 
 .rogue-trader .components .ship-components .item-list .header .name {
-    flex-basis: 50%;
+    flex-basis: 40%;
     text-align: left;
     margin-left: 20px;
 }
 
 .rogue-trader .components .ship-components .item-list .header .type {
-    flex-basis: 30%;
+    flex-basis: 15%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .header .isExposed {
+    flex-basis: 10%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .header .isExternal {
+    flex-basis: 10%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .header .status {
+    flex-basis: 10%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .header .environment {
+    flex-basis: 15%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .items .type {
+    flex-basis: 15%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .items .isExposed {
+    flex-basis: 10%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .items .isExternal {
+    flex-basis: 10%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .items .status {
+    flex-basis: 10%;
+    text-align: left;
+}
+
+.rogue-trader .components .ship-components .item-list .items .environment {
+    flex-basis: 15%;
     text-align: left;
 }
 /*
