@@ -11,6 +11,7 @@ import { ArmourSheet } from "../sheet/armour.js";
 import { ForceFieldSheet } from "../sheet/force-field.js";
 import { CyberneticSheet } from "../sheet/cybernetic.js";
 import { ShipHullSheet } from "../sheet/shipHull.js";
+import { ShipComponentSheet } from "../sheet/shipComponent.js";
 import { DrugSheet } from "../sheet/drug.js";
 import { GearSheet } from "../sheet/gear.js";
 import { ToolSheet } from "../sheet/tool.js";
@@ -56,6 +57,7 @@ Hooks.once("init", () => {
     Items.registerSheet("rogue-trader", GearSheet, { types: ["gear"], makeDefault: true });
     Items.registerSheet("rogue-trader", ToolSheet, { types: ["tool"], makeDefault: true });
     Items.registerSheet("rogue-trader", ShipHullSheet, { types: ["shipHull"], makeDefault: true });
+    Items.registerSheet("rogue-trader", ShipComponentSheet, { types: ["shipComponent"], makeDefault: true });
     Items.registerSheet("rogue-trader", CriticalInjurySheet, { types: ["criticalInjury"], makeDefault: true });
     Items.registerSheet("rogue-trader", MalignancySheet, { types: ["malignancy"], makeDefault: true });
     Items.registerSheet("rogue-trader", MentalDisorderSheet, { types: ["mentalDisorder"], makeDefault: true });
@@ -84,6 +86,11 @@ Hooks.on("preCreateItem", (createData) => {
     if (createData.type === "shipHull") {
         mergeObject(createData, {
             "img": "systems/rogue-trader/asset/icons/ship/shipHull.png"
+        });
+    }
+    else if(createData.type === "shipComponent") {
+        mergeObject(createData, {
+            "img": "systems/rogue-trader/asset/icons/ship/shipComponent.png"
         });
     }
 });

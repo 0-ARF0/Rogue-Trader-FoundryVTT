@@ -1,0 +1,108 @@
+.rogue-trader.shipComponent .notes-editor {
+    height: 290px;
+    max-height: 290px;
+}
+
+.rogue-trader.shipComponent .stats {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+
+    margin: 0 2px;
+}
+
+.rogue-trader.shipComponent .stats.border {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40%;
+    justify-content: center;
+    
+}
+
+
+.rogue-trader.shipComponent .stats-row {
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+.rogue-trader.shipComponent .stats-row label {
+    flex-basis: 60%;
+    justify-content: center;
+}
+.rogue-trader.shipComponent .stats-row input {
+    width: 3em;
+}
+
+.rogue-trader.shipComponent .stat.type select {
+    width: 10em;
+}
+
+.rogue-trader.shipComponent .state {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 0 2px;
+    justify-content: normal;
+}
+
+.rogue-trader.shipComponent .state.border {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: center;
+}
+
+
+.rogue-trader.shipComponent .state-row {
+    flex-basis: 50%;
+    margin-right: 5px;
+    justify-content: center;
+}
+.rogue-trader.shipComponent .state-row label {
+    flex-basis: 30%;
+
+}
+.rogue-trader.shipComponent .state-row select {
+    flex-basis: 30%;
+}
+
+.rogue-trader.shipComponent .modifiers.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-basis: 59%;
+    align-items: flex-start;
+}
+
+.rogue-trader.shipComponent .modifiers {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+}
+.rogue-trader.shipComponent .modifiers-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    
+}
+
+.rogue-trader.shipComponent .modifiers-row label {
+    width: 6em;
+}
+.rogue-trader.shipComponent .modifiers-row input {
+    width: 2em;
+}
+
+.rogue-trader.shipComponent .additional-effects.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-basis: 100%;
+    align-items: flex-start;
+    margin-top: 5px;
+}

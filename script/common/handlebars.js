@@ -50,6 +50,7 @@ function preloadHandlebarsTemplates() {
     "systems/rogue-trader/template/sheet/ammunition.html",
     "systems/rogue-trader/template/sheet/force-field.html",
     "systems/rogue-trader/template/sheet/shipHull.html",
+    "systems/rogue-trader/template/sheet/shipComponent.html",
     "systems/rogue-trader/template/sheet/characteristics/information.html",
     "systems/rogue-trader/template/sheet/characteristics/left.html",
     "systems/rogue-trader/template/sheet/characteristics/name.html",
@@ -293,6 +294,62 @@ Handlebars.registerHelper("hullType", function (hullType) {
       return game.i18n.localize("SHIP_HULL.CRUISER");
     default:
       return game.i18n.localize("SHIP_HULL.FRIGATE");
+  }
+});
+
+Handlebars.registerHelper("componentType", function (componentType) {
+  componentType = normalize(componentType, "supplemental");
+  switch (componentType) {
+    case "plasmaDrives":
+      return game.i18n.localize("SHIP_COMPONENT.PLASMA_DRIVES");
+    case "warpEngine":
+      return game.i18n.localize("SHIP_COMPONENT.WARP_ENGINE");
+    case "voidShields":
+      return game.i18n.localize("SHIP_COMPONENT.VOID_SHIELDS");
+    case "gellarField":
+      return game.i18n.localize("SHIP_COMPONENT.GELLAR_FIELD");
+    case "lifeSustainer":
+      return game.i18n.localize("SHIP_COMPONENT.LIFE_SUSTAINER");
+    case "crewCompartments":
+      return game.i18n.localize("SHIP_COMPONENT.CREW_COMPARTMENTS");
+    case "bridge":
+        return game.i18n.localize("SHIP_COMPONENT.BRIDGE");
+    case "sensors":
+      return game.i18n.localize("SHIP_COMPONENT.SENSORS");
+    case "supplemental":
+        return game.i18n.localize("SHIP_COMPONENT.SUPPLEMENTAL");
+    default:
+      return game.i18n.localize("SHIP_COMPONENT.SUPPLEMENTAL");
+  }
+});
+
+Handlebars.registerHelper("componentStatus", function (componentStatus) {
+  componentStatus = normalize(componentStatus, 0);
+  switch (componentStatus) {
+    case 0:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.INTACT");
+    case 1:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.UNPOWERED");
+    case 2:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.DAMAGED");;
+    case 3:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.DESTROYED");
+    default:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.INTACT");
+  }
+});
+
+Handlebars.registerHelper("componentEnvironment", function (componentEnvironment) {
+  componentEnvironment = normalize(componentEnvironment, 0);
+  switch (componentEnvironment) {
+    case 0:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.ACCEPTABLE");
+    case 1:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.DEPRESSURIZED");
+    case 2:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.FIRE");;
+    default:
+      return game.i18n.localize("SHIP_COMPONENT_STATUS.ACCEPTABLE");
   }
 });
 
