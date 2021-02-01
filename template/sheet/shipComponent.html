@@ -165,25 +165,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="additional-effects border">
-                    <h1>{{localize "TITLE.ADDITIONAL_EFFECTS"}}</h1>
-                    <div class="additional-effects-row">
-                        <div class="stat additional-effects-1">
-                            <label>{{localize "SHIP_COMPONENT.ADDITIONAL_EFFECT_DESCRIPTION"}}</label>
-                            <input name="data.additionalEffect" type="text" value="{{data.additionalEffect}}" />
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="tab" data-group="primary" data-tab="notes">
-                <div class="notes-editor border">
-                    <h1>{{localize "TITLE.NOTES"}}</h1>
-                    <div style="height: 275px; width: 100%">
-                        {{editor content=data.description target="data.description" button=true owner=owner
-                        editable=editable}}
+            <div class="additional-effects border">
+                <h1>{{localize "TITLE.ADDITIONAL_EFFECTS"}}</h1>
+                <div class="additional-effects">
+                    <div class="additional-effects-row">
+                        <label>{{localize "SHIP_COMPONENT.ADDITIONAL_EFFECT"}}</label>
+                        {{#if data.hasAdditionalEffect}}
+                        <input name="data.hasAdditionalEffect" type="checkbox" value="hasAdditionalEffect" checked />
+                        {{else}}
+                        <input name="data.hasAdditionalEffect" type="checkbox" value="hasAdditionalEffect" />
+                        {{/if}}
+                        <input name="data.additionalEffect" type="text" value="{{data.additionalEffect}}" />
                     </div>
+                    
                 </div>
             </div>
         </div>
+        <div class="tab" data-group="primary" data-tab="notes">
+            <div class="notes-editor border">
+                <h1>{{localize "TITLE.NOTES"}}</h1>
+                <div style="height: 275px; width: 100%">
+                    {{editor content=data.description target="data.description" button=true owner=owner
+                    editable=editable}}
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </form>

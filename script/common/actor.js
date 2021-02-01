@@ -25,8 +25,8 @@ export class DarkHeresyActor extends Actor {
         data.data.shipCharacteristics.crewPopulation.value = 100;
         let detection = 0;
         let space = 0;
-        let spaceUsed = 0;
-        let powerUsed = 0;
+        let spaceUse = 0;
+        let powerUse = 0;
         let powerGenerated = 0;
         for (let x of Object.values(data.items)) {
             console.log("generating ship characteristics for item: " + x.type);
@@ -43,15 +43,18 @@ export class DarkHeresyActor extends Actor {
             if (x.data.hasOwnProperty('powerGenerated')) {
                 powerGenerated += x.data.powerGenerated;
             }
-            if (x.data.hasOwnProperty('powerUsed')) {
-                powerUsed += x.data.powerUsed;
+            if (x.data.hasOwnProperty('powerUse')) {
+                powerUse += x.data.status == "1" ? 0 : x.data.powerUse;
+            }
+            if (x.data.hasOwnProperty('spaceUse')) {
+                spaceUse += x.data.isExternal || x.data.isExposed ? 0 : x.data.spaceUse;
             }
         }
         data.data.shipCharacteristics.space.max = space;
-        data.data.shipCharacteristics.space.value = spaceUsed;
+        data.data.shipCharacteristics.space.value = spaceUse;
 
         data.data.shipCharacteristics.power.max = powerGenerated;
-        data.data.shipCharacteristics.power.value = powerUsed;
+        data.data.shipCharacteristics.power.value = powerUse;
 
         //data.data.detection = 4;
         //data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;

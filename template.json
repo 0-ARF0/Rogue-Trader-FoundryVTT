@@ -111,7 +111,7 @@
           },
           "power": {
             "label": "SHIP_CHARACTERISTIC.POWER",
-            "short": "Space",
+            "short": "Pwr",
             "base": 0,
             "value": 0,
             "max": 0
@@ -1436,7 +1436,9 @@
       "apCriminal": 0,
       "apExploration": 0,
       "apMilitary": 0,
-      "apTrade": 0
+      "apTrade": 0,
+      "hasAdditionalEffect": false,
+      "additionalEffect": ""
     },
     "shipHull": {
       "hullType": "",

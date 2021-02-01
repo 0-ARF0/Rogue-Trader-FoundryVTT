@@ -200,6 +200,34 @@
     flex-basis: 15%;
     text-align: left;
 }
+
+.rogue-trader .components .ship-component-effects.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin-top: 5px;
+}
+
+.rogue-trader .components .ship-component-effects .item-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.rogue-trader .components .ship-component-effects .item-list .header {
+    margin-top: 3px;
+}
+
+.rogue-trader .components .ship-component-effects .item-list .header .name {
+    flex-basis: 40%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.rogue-trader .components .ship-component-effects .item-list .header .effect {
+    flex-basis: 60%;
+    text-align: left;
+}
 /*
 .rogue-trader .gear .all-gear {
     display: flex;

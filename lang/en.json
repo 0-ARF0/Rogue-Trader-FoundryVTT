@@ -304,6 +304,7 @@
   "SHIP_COMPONENT.POWER_USED": "Power used",
   "SHIP_COMPONENT.SPACE_USED": "Space used",
   "SHIP_COMPONENT.SP_USED": "Ship Points used",
+  "SHIP_COMPONENT.ADDITIONAL_EFFECT": "Additional Effect",
   "SHIP_COMPONENT.ADDITIONAL_EFFECT_DESCRIPTION": "Additional Effect description",
 
   
@@ -324,6 +325,7 @@
   "SHIP_COMPONENT_STATUS.UNPOWERED": "Unpowered",
   "SHIP_COMPONENT_STATUS.DAMAGED": "Damaged",
   "SHIP_COMPONENT_STATUS.DESTROYED": "Destroyed",
+
 
 
   "SHIP_HULL.NAME": "Name",

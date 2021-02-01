@@ -43,6 +43,7 @@
     flex-basis: 100%;
     margin: 0 2px;
     justify-content: normal;
+    align-items: center;
 }
 
 .rogue-trader.shipComponent .state.border {
@@ -54,17 +55,18 @@
 
 
 .rogue-trader.shipComponent .state-row {
+    display: flex;
     flex-basis: 50%;
     flex-wrap:wrap;
     margin-right: 5px;
-    justify-content: center;
+    align-items: center;
 }
 .rogue-trader.shipComponent .state-row label {
-    flex-basis: 30%;
+    flex-basis: 20%;
 
 }
 .rogue-trader.shipComponent .state-row select {
-    flex-basis: 30%;
+    flex-basis: 75%;
 }
 
 .rogue-trader.shipComponent .modifiers.border {
@@ -101,9 +103,36 @@
 
 .rogue-trader.shipComponent .additional-effects.border {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap:wrap;
     flex-basis: 100%;
     align-items: flex-start;
     margin-top: 5px;
+}
+
+.rogue-trader.shipComponent .additional-effects {
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+align-items:stretch;
+align-content: flex-start;
+
+}
+.rogue-trader.shipComponent .additional-effects .additional-effects-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: stretch;
+    margin-top: 2px;
+    align-items: center;
+
+    
+}
+.rogue-trader.shipComponent .additional-effects .additional-effects-row label {
+    width: 6em;
+    
+}
+
+.rogue-trader.shipComponent .additional-effects .additional-effects-row input {
+    width: 30em;
 }

@@ -369,6 +369,13 @@ Handlebars.registerHelper("componentEnvironment", function (componentEnvironment
   }
 });
 
+Handlebars.registerHelper("isNotEmptyString", function (value) {
+  if(value === "") {
+    return false;
+  }
+  return true;
+});
+
 function normalize(data, defaultValue) {
   if (typeof data === "string") {
     return data.toLowerCase();
