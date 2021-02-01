@@ -65,6 +65,69 @@
             <input type="number" value="{{data.shipCharacteristics.crewMorale.max}}" data-dtype="Number" disabled />
         </div>
     </div>
+    <div class="weapon-capacity border">
+        <h1>{{localize "TITLE.WEAPON_CAPACITY"}}</h1>
+        <div class="segment border">
+            <label>{{localize "SHIP_HULL.PROW"}}</label>
+            <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.prow.value}}" data-dtype="Number"
+                    disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.prow.max}}" data-dtype="Number"
+                    disabled />
+            </div>
+        </div>
+        <div class="segment border">
+            <label>{{localize "SHIP_HULL.PORT"}}</label>
+            <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.port.value}}" data-dtype="Number"
+                    disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.port.max}}" data-dtype="Number"
+                    disabled />
+            </div>
+        </div>
+        <div class="segment border">
+            <label>{{localize "SHIP_HULL.STARBOARD"}}</label>
+            <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.starboard.value}}" data-dtype="Number"
+                    disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.starboard.max}}" data-dtype="Number"
+                    disabled />
+            </div>
+        </div>
+        <div class="segment border">
+            <label>{{localize "SHIP_HULL.DORSAL"}}</label>
+            <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.dorsal.value}}" data-dtype="Number"
+                    disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.dorsal.max}}" data-dtype="Number"
+                    disabled />
+            </div>
+        </div>
+        <div class="segment border">
+            <label>{{localize "SHIP_HULL.KEEL"}}</label>
+            <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.keel.value}}" data-dtype="Number"
+                    disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.keel.max}}" data-dtype="Number"
+                    disabled />
+            </div>
+        </div>
+        <div class="segment border">
+            <label>{{localize "SHIP_HULL.AFT"}}</label>
+            <div class="information">
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.aft.value}}" data-dtype="Number"
+                    disabled />
+                /
+                <input type="number" value="{{data.shipCharacteristics.weaponCapacity.aft.max}}" data-dtype="Number"
+                    disabled />
+            </div>
+        </div>
+    </div>
     <div class="ship-components border">
         <h1>{{localize "TITLE.COMPONENTS"}}</h1>
         <div class="item-list">

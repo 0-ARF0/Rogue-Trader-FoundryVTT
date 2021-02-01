@@ -369,6 +369,28 @@ Handlebars.registerHelper("componentEnvironment", function (componentEnvironment
   }
 });
 
+Handlebars.registerHelper("componentWeaponCapacity", function (componentWeaponCapacity) {
+  componentWeaponCapacity = normalize(componentWeaponCapacity, "none");
+  switch (componentWeaponCapacity) {
+    case "none":
+      return game.i18n.localize("SHIP_HULL.NONE");
+    case "prow":
+      return game.i18n.localize("SHIP_HULL.PROW");
+    case "port":
+      return game.i18n.localize("SHIP_HULL.PORT");
+    case "starboard":
+      return game.i18n.localize("SHIP_HULL.STARBOARD");
+    case "dorsal":
+      return game.i18n.localize("SHIP_HULL.DORSAL");
+    case "keel":
+      return game.i18n.localize("SHIP_HULL.KEEL");
+    case "aft":
+        return game.i18n.localize("SHIP_HULL.AFT");
+    default:
+      return game.i18n.localize("SHIP_HULL.NONE");
+  }
+});
+
 Handlebars.registerHelper("isNotEmptyString", function (value) {
   if(value === "") {
     return false;

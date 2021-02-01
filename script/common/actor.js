@@ -25,40 +25,55 @@ export class DarkHeresyActor extends Actor {
         data.data.shipCharacteristics.crewPopulation.value = 100;
         let detection = 0;
         let space = 0;
+        let speed = 0;
+        let integrity = 0;
+        let armour = 0;
+        let voidShields = 0;
         let spaceUse = 0;
         let powerUse = 0;
         let powerGenerated = 0;
+
         for (let x of Object.values(data.items)) {
             console.log("generating ship characteristics for item: " + x.type);
 
             if (x.data.hasOwnProperty('hullType')) {
                 data.data.shipCharacteristics.type.typeName = x.data.hullType;
-            }
-            if (x.data.hasOwnProperty('hullDetection')) {
+                data.data.shipCharacteristics.weaponCapacity.prow.max = x.data.hullProwWeaponCap;
+                data.data.shipCharacteristics.weaponCapacity.port.max = x.data.hullPortWeaponCap;
+                data.data.shipCharacteristics.weaponCapacity.starboard.max = x.data.hullStarboardWeaponCap;
+                data.data.shipCharacteristics.weaponCapacity.dorsal.max = x.data.hullDorsalWeaponCap;
+                data.data.shipCharacteristics.weaponCapacity.keel.max = x.data.hullKeelWeaponCap;
+                data.data.shipCharacteristics.weaponCapacity.aft.max = x.data.hullAftWeaponCap;
                 detection += x.data.hullDetection;
-            }
-            if (x.data.hasOwnProperty('hullSpace')) {
                 space += x.data.hullSpace;
+                integrity += x.data.hullIntegrity;
             }
-            if (x.data.hasOwnProperty('powerGenerated')) {
+            if (x.type === "shipComponent") {
+                console.log("found shipComponent");
                 powerGenerated += x.data.powerGenerated;
-            }
-            if (x.data.hasOwnProperty('powerUse')) {
                 powerUse += x.data.status == "1" ? 0 : x.data.powerUse;
-            }
-            if (x.data.hasOwnProperty('spaceUse')) {
                 spaceUse += x.data.isExternal || x.data.isExposed ? 0 : x.data.spaceUse;
+                detection += x.data.detectionMod;
+                manoeuvrability += x.data.manoeuvrabilityMod;
+                speed += x.data.speedMod;
+                integrity += x.data.integrityMod;
+                armour += x.data.armourMod;
+                voidShields += x.data.voidShieldsMod;
             }
+
         }
         data.data.shipCharacteristics.space.max = space;
         data.data.shipCharacteristics.space.value = spaceUse;
-
+        data.data.shipCharacteristics.speed.value = speed;
+        data.data.shipCharacteristics.integrity = integrity;
         data.data.shipCharacteristics.power.max = powerGenerated;
         data.data.shipCharacteristics.power.value = powerUse;
+        data.data.shipCharacteristics.armour.value = armour;
+        data.data.shipCharacteristics.voidShields.value = voidShields;
+        
 
         //data.data.detection = 4;
         //data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;
-
     }
     _computeCharacteristics(data) {
         let middle = Object.values(data.data.characteristics).length / 2;
