@@ -72,8 +72,6 @@
                                 <option value="3">{{localize "SHIP_COMPONENT_STATUS.DESTROYED"}}</option>
                                 {{/select}}
                             </select>
-                        </div>
-                        <div class="state-row">
                             <label>{{localize "SHIP_COMPONENT.ENVIRONMENT"}}</label>
                             <select name="data.environment">
                                 {{#select data.environment}}
@@ -82,6 +80,20 @@
                                 <option value="2">{{localize "SHIP_COMPONENT_ENVIRONMENT.FIRE"}}</option>
                                 {{/select}}
                             </select>
+                        </div>
+                        <div class="state-row">
+                            <label>{{localize "SHIP_COMPONENT.EXPOSED"}}</label>
+                            {{#if data.isExposed}}
+                            <input name="data.isExposed" type="checkbox" value="isExposed" checked />
+                            {{else}}
+                            <input name="data.isExposed" type="checkbox" value="isExposed" />
+                            {{/if}}
+                            <label>{{localize "SHIP_COMPONENT.EXTERNAL"}}</label>
+                            {{#if data.isExternal}}
+                            <input name="data.isExternal" type="checkbox" value="isExternal" checked />
+                            {{else}}
+                            <input name="data.isExternal" type="checkbox" value="isExternal" />
+                            {{/if}}
                         </div>
                     </div>
                 </div>
@@ -160,18 +172,18 @@
                             <label>{{localize "SHIP_COMPONENT.ADDITIONAL_EFFECT_DESCRIPTION"}}</label>
                             <input name="data.additionalEffect" type="text" value="{{data.additionalEffect}}" />
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab" data-group="primary" data-tab="notes">
+                <div class="notes-editor border">
+                    <h1>{{localize "TITLE.NOTES"}}</h1>
+                    <div style="height: 275px; width: 100%">
+                        {{editor content=data.description target="data.description" button=true owner=owner
+                        editable=editable}}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tab" data-group="primary" data-tab="notes">
-            <div class="notes-editor border">
-                <h1>{{localize "TITLE.NOTES"}}</h1>
-                <div style="height: 275px; width: 100%">
-                    {{editor content=data.description target="data.description" button=true owner=owner
-                    editable=editable}}
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
 </form>

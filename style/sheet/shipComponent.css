@@ -55,6 +55,7 @@
 
 .rogue-trader.shipComponent .state-row {
     flex-basis: 50%;
+    flex-wrap:wrap;
     margin-right: 5px;
     justify-content: center;
 }
