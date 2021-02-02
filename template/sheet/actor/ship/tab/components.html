@@ -44,6 +44,12 @@
                 <label>{{data.shipCharacteristics.turretRating.value}}</label>
             </div>
         </div>
+        <div class="segment border">
+            <label>{{localize "SHIP_CHARACTERISTIC.VS"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.voidShields.max}}</label>
+            </div>
+        </div>
     </div>
     <div class="ship-component-limits border">
         <h1>{{localize "TITLE.STATS"}}</h1>
@@ -62,7 +68,7 @@
         <div class="segment-top border">
             <label>{{localize "SHIP_CHARACTERISTIC.SHIP_POINTS_USE"}}</label>
             <div class="information">
-                <label>{{data.shipCharacteristics.shipPoints.value}} / {{data.shipCharacteristics.shipPoints.max}}</label>
+                <label>{{data.shipCharacteristics.shipPoints.value}}</label>
             </div>
         </div>
         <div class="segment-bottom border">

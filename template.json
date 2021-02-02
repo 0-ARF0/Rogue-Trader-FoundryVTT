@@ -1303,7 +1303,8 @@
       "weaponModification",
       "shipComponent",
       "shipWeapon",
-      "shipHull"
+      "shipHull",
+      "shipQuirk"
     ],
     "templates": {
       "equipment": {
@@ -1315,6 +1316,29 @@
       "itemDescription": {
         "description": "",
         "source": ""
+      },
+      "shipCharacteristicMods": {
+        "powerUse": 0,
+        "powerGenerated": 0,
+        "spaceUse": 0,
+        "spUse": 0,
+        "detectionMod": 0,
+        "manoeuvrabilityMod": 0,
+        "speedMod": 0,
+        "integrityMod": 0,
+        "armourMod": 0,
+        "voidShieldsMod": 0,
+        "turretRatingMod": 0,
+        "voidDurationMultiplier": 0,
+        "moraleMaxMod": 0,
+        "popMaxMod": 0,
+        "apCreed": 0,
+        "apCriminal": 0,
+        "apExploration": 0,
+        "apMilitary": 0,
+        "apTrade": 0,
+        "hasAdditionalEffect": false,
+        "additionalEffect": ""
       }
     },
     "ammunition": {
@@ -1483,34 +1507,24 @@
         "itemDescription"
       ]
     },
+    "shipQuirk": {
+      "type": "",
+      "templates": [
+        "shipCharacteristicMods"
+      ],
+      "isActive": true
+    },
     "shipComponent": {
+      "templates": [
+        "shipCharacteristicMods"
+      ],
       "type": "",
       "appropriateHullTypes": [],
-      "powerUse": 0,
-      "powerGenerated": 0,
-      "spaceUse": 0,
-      "spUse": 0,
       "isExposed": false,
       "isExternal": false,
       "status": 0,
       "environment": 0,
       "isEssential": false,
-      "detectionMod": 0,
-      "manoeuvrabilityMod": 0,
-      "speedMod": 0,
-      "integrityMod": 0,
-      "armourMod": 0,
-      "voidShieldsMod": 0,
-      "turretRatingMod": 0,
-      "voidDurationMultiplier": 0,
-      "moraleMaxMod": 0,
-      "apCreed": 0,
-      "apCriminal": 0,
-      "apExploration": 0,
-      "apMilitary": 0,
-      "apTrade": 0,
-      "hasAdditionalEffect": false,
-      "additionalEffect": "",
       "weapon": {
         "isWeapon": false,
         "weaponCapacityUse": "",

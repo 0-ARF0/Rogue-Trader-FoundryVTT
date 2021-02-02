@@ -27,6 +27,7 @@ export class DarkHeresyActor extends Actor {
         let voidShieldsTotal = 0;
         let spaceUseTotal = 0;
         let powerUseTotal = 0;
+        let shipPointsUseTotal = 0;
         let powerGeneratedTotal = 0;
         let manoeuvrabilityTotal = 0;
         let turretRatingTotal = 0;
@@ -56,13 +57,16 @@ export class DarkHeresyActor extends Actor {
                 spaceTotal += x.data.hullSpace;
                 integrityTotal += x.data.hullIntegrity;
                 armourTotal += x.data.hullArmour;
-                turretRatingTotal = x.data.hullTurretRating;
+                turretRatingTotal += x.data.hullTurretRating;
+                shipPointsUseTotal += x.data.hullShipPoints;
             }
-            if (x.type === "shipComponent") {
-                spaceUseTotal += x.data.isExternal || x.data.isExposed ? 0 : x.data.spaceUse;
-                if (x.data.status == "0") {
+            if((x.type === "shipQuirk" && x.data.isActive) || (x.type === "shipComponent" && !(x.data.isExposed || x.data.isExternal))) {
+                spaceUseTotal += x.data.spaceUse;
+            }
+            if ((x.type === "shipComponent" && x.data.status == "0") || (x.type === "shipQuirk" && x.data.isActive) ) {
                     powerGeneratedTotal += x.data.powerGenerated;
                     powerUseTotal += x.data.powerUse;
+                    shipPointsUseTotal += x.data.spUse;
                     detectionTotal += x.data.detectionMod;
                     manoeuvrabilityTotal += x.data.manoeuvrabilityMod;
                     speedTotal += x.data.speedMod;
@@ -93,11 +97,6 @@ export class DarkHeresyActor extends Actor {
                             console.log("found weapon with no capacity");
                     }
                 }
-
-                console.log("found shipComponent");
-
-            }
-
         }
         data.data.shipCharacteristics.space.max = spaceTotal;
         data.data.shipCharacteristics.space.value = spaceUseTotal;
@@ -105,8 +104,9 @@ export class DarkHeresyActor extends Actor {
         data.data.shipCharacteristics.integrity.max = integrityTotal;
         data.data.shipCharacteristics.power.value = powerUseTotal;
         data.data.shipCharacteristics.power.max = powerGeneratedTotal;
+        data.data.shipCharacteristics.shipPoints.value = shipPointsUseTotal;
         data.data.shipCharacteristics.armour.value = armourTotal;
-        data.data.shipCharacteristics.voidShields.value = voidShieldsTotal;
+        data.data.shipCharacteristics.voidShields.max = voidShieldsTotal;
         data.data.shipCharacteristics.turretRating.value = turretRatingTotal;
         data.data.shipCharacteristics.detection.value = detectionTotal;
         data.data.shipCharacteristics.manoeuvrability.value = manoeuvrabilityTotal;
