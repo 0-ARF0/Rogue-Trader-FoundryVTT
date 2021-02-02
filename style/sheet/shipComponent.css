@@ -101,6 +101,43 @@
     width: 2em;
 }
 
+.rogue-trader.shipComponent .weapon.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-basis: 100%;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.rogue-trader.shipComponent .weapon {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-content: flex-start;
+}
+.rogue-trader.shipComponent .weapon-row {
+    display: flex;
+    margin-right: 5px;
+    margin-top: 2px;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.rogue-trader.shipComponent .weapon-row label {
+    margin-right: 5px;
+    flex-basis: 40%;
+    text-align: right;
+}
+
+.rogue-trader.shipComponent .weapon-row input {
+    margin-right: 5px;
+    width: 7em;
+}
+.rogue-trader.shipComponent .weapon-row select {
+    margin-right: 5px;
+}
+
 .rogue-trader.shipComponent .additional-effects.border {
     display: flex;
     flex-direction: column;

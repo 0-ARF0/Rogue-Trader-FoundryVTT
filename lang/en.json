@@ -342,8 +342,11 @@
   "SHIP_HULL.DETECTION": "Detection",
   "SHIP_HULL.INTEGRITY": "Integrity",
   "SHIP_HULL.ARMOUR": "Armour",
+  "SHIP_HULL.TURRET_RATING": "Turret Rating",
+  "SHIP_HULL.TR" : "T.R.",
   "SHIP_HULL.SPACE": "Space",
   "SHIP_HULL.SHIP_POINTS": "Ship Points",
+
 
   "SHIP_HULL.PROW": "Prow",
   "SHIP_HULL.PORT": "Port",
@@ -351,6 +354,19 @@
   "SHIP_HULL.DORSAL": "Dorsal",
   "SHIP_HULL.KEEL": "Keel",
   "SHIP_HULL.AFT": "Aft",
+  
+  "SHIP_WEAPON.NOT_WEAPON": "Not a Weapon",
+  "SHIP_WEAPON.SLOT": "Slot",
+  "SHIP_WEAPON.STRENGTH": "Strength",
+  "SHIP_WEAPON.DAMAGE": "Damage",
+  "SHIP_WEAPON.CRIT_RATING": "Crit Rating",
+  "SHIP_WEAPON.RANGE": "Range",
+  "SHIP_WEAPON.TYPE": "Weapon Type",
+  "SHIP_WEAPON.MACROBATTERIES": "Macrobatteries",
+  "SHIP_WEAPON.LANCE": "Lance",
+  "SHIP_WEAPON.NOVA_CANNON": "Nova cannon",
+  "SHIP_WEAPON.TORPEDO_TUBES": "Torpedo tubes",
+  "SHIP_WEAPON.LANDING_BAYS": "Landing Bays",
 
 
   "SKILL.ACROBATICS": "Acrobatics",
@@ -453,6 +469,7 @@
   "TITLE.ARMOURS": "ARMOURS",
   "TITLE.WOUNDS": "WOUNDS",
   "TITLE.MOVEMENT": "MOVEMENT",
+  "TITLE.WEAPON": "WEAPON",
   "TITLE.WEAPONS": "WEAPONS",
   "TITLE.GEAR": "GEAR",
   "TITLE.DRUGS": "DRUGS",
@@ -485,6 +502,7 @@
   "TITLE.STATE": "STATE",
   "TITLE.MODIFIERS": "MODIFIERS",
   "TITLE.ADDITIONAL_EFFECTS": "ADDITIONAL EFFECTS",
+  "TITLE.DEFENCE": "DEFENCE",
 
   "WEAPON.HEADER": "Weapon",
   "WEAPON.NAME": "Name",

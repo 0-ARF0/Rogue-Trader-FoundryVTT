@@ -143,6 +143,12 @@
             "value": 0,
             "max": 0
           },
+          "turretRating": {
+            "label": "SHIP_CHARACTERISTIC.TURRET_RATING",
+            "short": "Turret",
+            "base": 0,
+            "value": 0
+          },
           "crewPopulation": {
             "label": "SHIP_CHARACTERISTIC.CREW_POPULATION",
             "short": "Pop",
@@ -1498,30 +1504,38 @@
       "apTrade": 0,
       "hasAdditionalEffect": false,
       "additionalEffect": "",
-      "weaponCapacityUse": ""
+      "weapon": {
+        "isWeapon": false,
+        "weaponCapacityUse": "",
+        "weaponType": "",
+        "strength": 0,
+        "damage": "",
+        "critRating": 0,
+        "range": 0
+      }
     },
-  "shipHull": {
-    "hullType": "",
-    "hullDescription": "",
-    "hullDimensionsLength": 0,
-    "hullDimensionsAbeam": 0,
-    "hullMass": 0,
-    "hullCrew": 0,
-    "hullAcceleration": 0,
-    "hullSpeed": 0,
-    "hullManoeuvrability": 0,
-    "hullDetection": 0,
-    "hullIntegrity": 0,
-    "hullArmour": 0,
-    "hullTurretRating": 0,
-    "hullSpace": 0,
-    "hullShipPoints": 0,
-    "hullProwWeaponCap": 0,
-    "hullPortWeaponCap": 0,
-    "hullStarboardWeaponCap": 0,
-    "hullDorsalWeaponCap": 0,
-    "hullKeelWeaponCap": 0,
-    "hullAftWeaponCap": 0
+    "shipHull": {
+      "hullType": "",
+      "hullDescription": "",
+      "hullDimensionsLength": 0,
+      "hullDimensionsAbeam": 0,
+      "hullMass": 0,
+      "hullCrew": 0,
+      "hullAcceleration": 0,
+      "hullSpeed": 0,
+      "hullManoeuvrability": 0,
+      "hullDetection": 0,
+      "hullIntegrity": 0,
+      "hullArmour": 0,
+      "hullTurretRating": 0,
+      "hullSpace": 0,
+      "hullShipPoints": 0,
+      "hullProwWeaponCap": 0,
+      "hullPortWeaponCap": 0,
+      "hullStarboardWeaponCap": 0,
+      "hullDorsalWeaponCap": 0,
+      "hullKeelWeaponCap": 0,
+      "hullAftWeaponCap": 0
+    }
   }
-}
 }

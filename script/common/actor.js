@@ -18,20 +18,26 @@ export class DarkHeresyActor extends Actor {
     }
 
     _computeShipCharacteristics(data) {
-        // for(let x of Object.values(data.data.shipCharacteristics.detection)) {
-        //     console.log(x);
         data.data.shipCharacteristics.type.typeName = "NO HULL";
-        data.data.shipCharacteristics.crewPopulation.max = 100;
-        data.data.shipCharacteristics.crewPopulation.value = 100;
-        let detection = 0;
-        let space = 0;
-        let speed = 0;
-        let integrity = 0;
-        let armour = 0;
-        let voidShields = 0;
-        let spaceUse = 0;
-        let powerUse = 0;
-        let powerGenerated = 0;
+        let detectionTotal = 0;
+        let spaceTotal = 0;
+        let speedTotal = 0;
+        let integrityTotal = 0;
+        let armourTotal = 0;
+        let voidShieldsTotal = 0;
+        let spaceUseTotal = 0;
+        let powerUseTotal = 0;
+        let powerGeneratedTotal = 0;
+        let manoeuvrabilityTotal = 0;
+        let turretRatingTotal = 0;
+        let prowCapUseTotal = 0;
+        let portCapUseTotal = 0;
+        let starboardCapUseTotal = 0;
+        let dorsalCapUseTotal = 0;
+        let keelCapUseTotal = 0;
+        let aftCapUseTotal = 0;
+        let crewMoraleMaxTotal = 100;
+        let crewPopMaxTotal = 100;
 
         for (let x of Object.values(data.items)) {
             console.log("generating ship characteristics for item: " + x.type);
@@ -44,36 +50,75 @@ export class DarkHeresyActor extends Actor {
                 data.data.shipCharacteristics.weaponCapacity.dorsal.max = x.data.hullDorsalWeaponCap;
                 data.data.shipCharacteristics.weaponCapacity.keel.max = x.data.hullKeelWeaponCap;
                 data.data.shipCharacteristics.weaponCapacity.aft.max = x.data.hullAftWeaponCap;
-                detection += x.data.hullDetection;
-                space += x.data.hullSpace;
-                integrity += x.data.hullIntegrity;
+                detectionTotal += x.data.hullDetection;
+                manoeuvrabilityTotal += x.data.hullManeuvrability;
+                spaceTotal += x.data.hullSpace;
+                integrityTotal += x.data.hullIntegrity;
+                armourTotal += x.data.hullArmour;
+                turretRatingTotal = x.data.hullTurretRating;
             }
             if (x.type === "shipComponent") {
+                spaceUseTotal += x.data.isExternal || x.data.isExposed ? 0 : x.data.spaceUse;
+                if (x.data.status == "0") {
+                    powerGeneratedTotal += x.data.powerGenerated;
+                    powerUseTotal += x.data.powerUse;
+                    detectionTotal += x.data.detectionMod;
+                    manoeuvrabilityTotal += x.data.manoeuvrabilityMod;
+                    speedTotal += x.data.speedMod;
+                    integrityTotal += x.data.integrityMod;
+                    armourTotal += x.data.armourMod;
+                    voidShieldsTotal += x.data.voidShieldsMod;
+                    turretRatingTotal += x.data.turretRatingMod;
+                    switch (x.data.weapon.weaponCapacityUse) {
+                        case "prow":
+                            prowCapUseTotal += 1;
+                            break;
+                        case "port":
+                            portCapUseTotal += 1;
+                            break;
+                        case "starboard":
+                            starboardCapUseTotal += 1;
+                            break;
+                        case "dorsal":
+                            dorsalCapUseTotal += 1;
+                            break;
+                        case "keel":
+                            keelCapUseTotal += 1;
+                            break;
+                        case "aft":
+                            aftCapUseTotal += 1;
+                            break;
+                        default:
+                            console.log("found weapon with no capacity");
+                    }
+                }
+
                 console.log("found shipComponent");
-                powerGenerated += x.data.powerGenerated;
-                powerUse += x.data.status == "1" ? 0 : x.data.powerUse;
-                spaceUse += x.data.isExternal || x.data.isExposed ? 0 : x.data.spaceUse;
-                detection += x.data.detectionMod;
-                manoeuvrability += x.data.manoeuvrabilityMod;
-                speed += x.data.speedMod;
-                integrity += x.data.integrityMod;
-                armour += x.data.armourMod;
-                voidShields += x.data.voidShieldsMod;
+
             }
 
         }
-        data.data.shipCharacteristics.space.max = space;
-        data.data.shipCharacteristics.space.value = spaceUse;
-        data.data.shipCharacteristics.speed.value = speed;
-        data.data.shipCharacteristics.integrity = integrity;
-        data.data.shipCharacteristics.power.max = powerGenerated;
-        data.data.shipCharacteristics.power.value = powerUse;
-        data.data.shipCharacteristics.armour.value = armour;
-        data.data.shipCharacteristics.voidShields.value = voidShields;
-        
+        data.data.shipCharacteristics.space.max = spaceTotal;
+        data.data.shipCharacteristics.space.value = spaceUseTotal;
+        data.data.shipCharacteristics.speed.value = speedTotal;
+        data.data.shipCharacteristics.integrity.max = integrityTotal;
+        data.data.shipCharacteristics.power.value = powerUseTotal;
+        data.data.shipCharacteristics.power.max = powerGeneratedTotal;
+        data.data.shipCharacteristics.armour.value = armourTotal;
+        data.data.shipCharacteristics.voidShields.value = voidShieldsTotal;
+        data.data.shipCharacteristics.turretRating.value = turretRatingTotal;
+        data.data.shipCharacteristics.detection.value = detectionTotal;
+        data.data.shipCharacteristics.manoeuvrability.value = manoeuvrabilityTotal;
+        data.data.shipCharacteristics.weaponCapacity.prow.value = prowCapUseTotal;
+        data.data.shipCharacteristics.weaponCapacity.starboard.value = starboardCapUseTotal;
+        data.data.shipCharacteristics.weaponCapacity.port.value = portCapUseTotal;
+        data.data.shipCharacteristics.weaponCapacity.dorsal.value = dorsalCapUseTotal;
+        data.data.shipCharacteristics.weaponCapacity.keel.value = keelCapUseTotal;
+        data.data.shipCharacteristics.weaponCapacity.aft.value = aftCapUseTotal;
+        data.data.shipCharacteristics.crewPopulation.max = crewPopMaxTotal;
+        data.data.shipCharacteristics.crewMorale.max = crewMoraleMaxTotal;
 
-        //data.data.detection = 4;
-        //data.data.initiative.bonus = data.data.shipCharacteristics[data.data.initiative.shipCharacteristic].bonus;
+
     }
     _computeCharacteristics(data) {
         let middle = Object.values(data.data.characteristics).length / 2;
@@ -95,7 +140,6 @@ export class DarkHeresyActor extends Actor {
         for (let skill of Object.values(data.data.skills)) {
             let short = skill.characteristics[0];
             let characteristic = this._findCharacteristic(data, short)
-            //skill.total = characteristic.total + skill.advance;
             //halve the skill if untrained
             if (skill.advance == -20) {
                 if (characteristic.total > 0) {
@@ -122,7 +166,6 @@ export class DarkHeresyActor extends Actor {
             item.isShipComponent = item.type === "shipComponent";
             if (item.isShipHull) {
                 data.data.hasHull = true;
-                console.log("set hasHull to true");
             }
         }
     }

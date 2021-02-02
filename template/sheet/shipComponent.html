@@ -166,6 +166,48 @@
                     </div>
                 </div>
             </div>
+            <div class="weapon border">
+                <h1>{{localize "TITLE.WEAPON"}}</h1>
+                <div class="weapon">
+                    <div class="weapon-row">
+                        <label>{{localize "SHIP_WEAPON.SLOT"}}</label>
+                        <select name="data.weapon.weaponCapacityUse">
+                            {{#select data.weapon.weaponCapacityUse}}
+                            <option value="none">{{localize "SHIP_WEAPON.NOT_WEAPON"}}</option>
+                            <option value="prow">{{localize "SHIP_HULL.PROW"}}</option>
+                            <option value="port">{{localize "SHIP_HULL.PORT"}}</option>
+                            <option value="starboard">{{localize "SHIP_HULL.STARBOARD"}}</option>
+                            <option value="dorsal">{{localize "SHIP_HULL.DORSAL"}}</option>
+                            <option value="keel">{{localize "SHIP_HULL.KEEL"}}
+                            </option>
+                            <option value="aft">{{localize "SHIP_HULL.AFT"}}</option>
+                            {{/select}}
+                        </select>
+
+                        <label>{{localize "SHIP_WEAPON.TYPE"}}</label>
+                        <select name="data.weapon.weaponType">
+                            {{#select data.weapon.weaponType}}
+                            <option value="macro">{{localize "SHIP_WEAPON.MACROBATTERIES"}}</option>
+                            <option value="lance">{{localize "SHIP_WEAPON.LANCE"}}</option>
+                            <option value="nova">{{localize "SHIP_WEAPON.NOVA_CANNON"}}</option>
+                            <option value="torp">{{localize "SHIP_WEAPON.TORPEDO_TUBES"}}</option>
+                            <option value="bay">{{localize "SHIP_WEAPON.LANDING_BAYS"}}</option>
+                            {{/select}}
+                        </select>
+
+                    </div>
+                    <div class="weapon-row">
+                        <label>{{localize "SHIP_WEAPON.STRENGTH"}}</label>
+                        <input name="data.weapon.strength" type="number" value="{{data.weapon.strength}}" data-dtype="Number" />
+                        <label>{{localize "SHIP_WEAPON.DAMAGE"}}</label>
+                        <input name="data.weapon.damage" type="text" value="{{data.weapon.damage}}" />
+                        <label>{{localize "SHIP_WEAPON.CRIT_RATING"}}</label>
+                        <input name="data.weapon.critRating" type="number" value="{{data.weapon.critRating}}" data-dtype="Number" />
+                        <label>{{localize "SHIP_WEAPON.RANGE"}}</label>
+                        <input name="data.weapon.range" type="number" value="{{data.weapon.range}}" data-dtype="Number" />
+                        </div>
+                </div>
+            </div>
             <div class="additional-effects border">
                 <h1>{{localize "TITLE.ADDITIONAL_EFFECTS"}}</h1>
                 <div class="additional-effects">
@@ -178,7 +220,7 @@
                         {{/if}}
                         <input name="data.additionalEffect" type="text" value="{{data.additionalEffect}}" />
                     </div>
-                    
+
                 </div>
             </div>
         </div>

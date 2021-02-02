@@ -373,7 +373,7 @@ Handlebars.registerHelper("componentWeaponCapacity", function (componentWeaponCa
   componentWeaponCapacity = normalize(componentWeaponCapacity, "none");
   switch (componentWeaponCapacity) {
     case "none":
-      return game.i18n.localize("SHIP_HULL.NONE");
+      return game.i18n.localize("SHIP_WEAPON.NOT_WEAPON");
     case "prow":
       return game.i18n.localize("SHIP_HULL.PROW");
     case "port":
@@ -387,7 +387,7 @@ Handlebars.registerHelper("componentWeaponCapacity", function (componentWeaponCa
     case "aft":
         return game.i18n.localize("SHIP_HULL.AFT");
     default:
-      return game.i18n.localize("SHIP_HULL.NONE");
+      return game.i18n.localize("SHIP_WEAPON.NOT_WEAPON");
   }
 });
 
