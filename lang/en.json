@@ -5,7 +5,6 @@
   "ACHIEVEMENT_POINTS.EXPLORATION": "Exploration",
   "ACHIEVEMENT_POINTS.MILITARY": "Military",
   "ACHIEVEMENT_POINTS.TRADE": "Trade",
-
   "ADVANCE.NONE": "None",
   "ADVANCE.UNTRAINED": "Untrained",
   "ADVANCE.SIMPLE": "Simple",
@@ -15,9 +14,7 @@
   "ADVANCE.PROFICIENT": "Proficient",
   "ADVANCE.EXPERT": "Expert",
   "ADVANCE.VETERAN": "Veteran",
-
   "APTITUDE.NAME": "Name",
-
   "AMMUNITION.HEADER": "Ammunition",
   "AMMUNITION.NAME": "Name",
   "AMMUNITION.WEAPON": "Weapon",
@@ -29,14 +26,12 @@
   "AMMUNITION.DAMAGE": "Damage",
   "AMMUNITION.ATTACK": "Attack",
   "AMMUNITION.PENETRATION": "Pen",
-
   "ARMOUR.HEAD": "Head",
   "ARMOUR.LEFT_ARM": "Left Arm",
   "ARMOUR.RIGHT_ARM": "Right Arm",
   "ARMOUR.BODY": "Body",
   "ARMOUR.LEFT_LEG": "Left Leg",
   "ARMOUR.RIGHT_LEG": "Right Leg",
-
   "ARMOUR.HEADER": "Armour",
   "ARMOUR.NAME": "Name",
   "ARMOUR.PART": "Part",
@@ -45,13 +40,11 @@
   "ARMOUR.TYPE": "Type",
   "ARMOUR.CRAFTSMANSHIP": "Craftsmanship",
   "ARMOUR.AVAILABILITY": "Availability",
-
   "ARMOUR_TYPE.BASIC": "Basic",
   "ARMOUR_TYPE.FLAK": "Flak",
   "ARMOUR_TYPE.MESH": "Mesh",
   "ARMOUR_TYPE.CARAPACE": "Carapace",
   "ARMOUR_TYPE.POWER": "Power",
-
   "ATTACK_TYPE.NONE": "None",
   "ATTACK_TYPE.STANDARD": "Standard",
   "ATTACK_TYPE.SWIFT": "Swift",
@@ -59,7 +52,6 @@
   "ATTACK_TYPE.LIGHTNING": "Lightning",
   "ATTACK_TYPE.FULL_AUTO": "Full Auto",
   "ATTACK_TYPE.CALLED_SHOT": "Called Shot",
-
   "AVAILABILITY.UBIQUITOUS": "Ubiquitous",
   "AVAILABILITY.ABUNDANT": "Abundant",
   "AVAILABILITY.PLENTIFUL": "Plentiful",
@@ -71,7 +63,6 @@
   "AVAILABILITY.EXTREMELY_RARE": "Extremely Rare",
   "AVAILABILITY.NEAR_UNIQUE": "Near Unique",
   "AVAILABILITY.UNIQUE": "Unique",
-
   "BIO.NAME": "Name",
   "BIO.HOME_WORLD": "Home World",
   "BIO.BACKGROUND": "Background",
@@ -80,7 +71,6 @@
   "BIO.TRIALS": "Trials & Travails",
   "BIO.MOTIVATION": "Motivation",
   "BIO.CAREER": "Career",
-  
   "BIO.ROLE": "Role",
   "BIO.ELITE": "Elite",
   "BIO.GENDER": "Gender",
@@ -96,16 +86,13 @@
   "BIO.FACTION": "Faction",
   "BIO.SUBFACTION": "Subfaction",
   "BIO.THREAT_LEVEL": "Threat Level",
-
   "BUTTON.POST_ITEM": "Post Item",
   "BUTTON.ROLL": "Roll",
   "BUTTON.CANCEL": "Cancel",
   "BUTTON.YES": "Yes",
   "BUTTON.NO": "No",
-
   "ENCUMBRANCE.MAX": "Max",
   "ENCUMBRANCE.CURRENT": "Current",
-
   "CHARACTERISTIC.WEAPON_SKILL": "Weapon Skill",
   "CHARACTERISTIC.BALLISTIC_SKILL": "Ballistic Skill",
   "CHARACTERISTIC.STRENGTH": "Strength",
@@ -115,13 +102,11 @@
   "CHARACTERISTIC.PERCEPTION": "Perception",
   "CHARACTERISTIC.WILLPOWER": "Willpower",
   "CHARACTERISTIC.FELLOWSHIP": "Fellowship",
-
   "CHARACTERISTIC.NAME": "Name",
   "CHARACTERISTIC.ADVANCE": "Advance",
   "CHARACTERISTIC.UNNATURAL": "Unnatural",
   "CHARACTERISTIC.BASE": "Base",
   "CHARACTERISTIC.COST": "Cost",
-
   "CHAT.SUCCESS": "Success!",
   "CHAT.FAILURE": "Failure!",
   "CHAT.ROLLED_WITH": "Rolled With",
@@ -134,27 +119,22 @@
   "CHAT.PSY_PUSH": "Push",
   "CHAT.NUMBER_OF_HIT": "Number of Hit",
   "CHAT.HAS_PSYCHIC_PHENOMENA": "You must roll on the Psychic Phenomena table !",
-
   "CORRUPTION.HEADER": "Corruption",
   "CORRUPTION.MALIGNANCY": "Malignancy",
   "CORRUPTION.MUTATION": "Mutation",
-
   "CRAFTSMANSHIP.POOR": "Poor",
   "CRAFTSMANSHIP.COMMON": "Common",
   "CRAFTSMANSHIP.GOOD": "Good",
   "CRAFTSMANSHIP.BEST": "Best",
-
   "CRITICAL_INJURY.NAME": "Name",
   "CRITICAL_INJURY.PART": "Part",
   "CRITICAL_INJURY.TYPE": "Type",
-
   "CYBERNETIC.HEADER": "Cybernetic",
   "CYBERNETIC.NAME": "Name",
   "CYBERNETIC.INSTALLED": "Installed",
   "CYBERNETIC.CRAFTSMANSHIP": "Craftsmanship",
   "CYBERNETIC.AVAILABILITY": "Availability",
   "CYBERNETIC.WEIGHT": "Weight",
-
   "DAMAGE_TYPE.ENERGY": "Energy",
   "DAMAGE_TYPE.IMPACT": "Impact",
   "DAMAGE_TYPE.RENDING": "Rending",
@@ -163,7 +143,6 @@
   "DAMAGE_TYPE.IMPACT_SHORT": "I",
   "DAMAGE_TYPE.RENDING_SHORT": "R",
   "DAMAGE_TYPE.EXPLOSIVE_SHORT": "E",
-
   "DIALOG.CUSTOM_ROLL": "Custom Roll",
   "DIALOG.ROLL_WITH": "Roll With",
   "DIALOG.TARGET": "Target",
@@ -175,14 +154,12 @@
   "DIALOG.PSY_RATING": "Psy Rating",
   "DIALOG.RANGE": "Range",
   "DIALOG.ATTACK_TYPE": "Attack Type",
-
   "DRUG.HEADER": "Drug",
   "DRUG.NAME": "Name",
   "DRUG.SHORT_DESCRIPTION": "Short Description",
   "DRUG.WEIGHT": "Weight",
   "DRUG.CRAFTSMANSHIP": "Craftsmanship",
   "DRUG.AVAILABILITY": "Availability",
-
   "EXPERIENCE.CURRENT": "Current",
   "EXPERIENCE.SPENT_CHARACTERISTICS": "Spent on Characteristics",
   "EXPERIENCE.SPENT_SKILLS": "Spent on Skills",
@@ -190,12 +167,9 @@
   "EXPERIENCE.SPENT_PSYCHIC_POWERS": "Spent on Psychic Powers",
   "EXPERIENCE.TOTAL_SPENT": "Total Spent",
   "EXPERIENCE.TOTAL": "Total",
-
   "FATE": "Fate",
   "FATIGUE": "Fatigue",
-
   "FEAR.HEADER": "Fear",
-
   "FORCE_FIELD.HEADER": "Force Field",
   "FORCE_FIELD.NAME": "Name",
   "FORCE_FIELD.CRAFTSMANSHIP": "Craftsmanship",
@@ -203,35 +177,25 @@
   "FORCE_FIELD.AVAILABILITY": "Availability",
   "FORCE_FIELD.PROTECTION_RATING": "Protection Rating",
   "FORCE_FIELD.OVERLOAD_CHANCE": "Overload Chance",
-
   "GEAR.HEADER": "Gear",
   "GEAR.NAME": "Name",
   "GEAR.SHORT_DESCRIPTION": "Short Description",
   "GEAR.WEIGHT": "Weight",
   "GEAR.CRAFTSMANSHIP": "Craftsmanship",
   "GEAR.AVAILABILITY": "Availability",
-
   "HEADER.DESCRIPTION": "Description",
-
   "INITIATIVE": "Initiative",
-
   "INSANITY.MENTAL_DISORDER": "Mental Disorder",
-
   "MALIGNANCY.NAME": "Name",
-
   "MENTAL_DISORDER.NAME": "Name",
-
   "MOVEMENT.HALF": "Half",
   "MOVEMENT.FULL": "Full",
   "MOVEMENT.CHARGE": "Charge",
   "MOVEMENT.RUN": "Run",
-
   "MUTATION.NAME": "Name",
-
   "NPC_TYPE.TROOP": "Troop",
   "NPC_TYPE.MASTER": "Master",
   "NPC_TYPE.ELITE": "Elite",
-
   "PSYCHIC_POWER.NAME": "Name",
   "PSYCHIC_POWER.COST": "Cost",
   "PSYCHIC_POWER.CLASS": "Class",
@@ -253,35 +217,36 @@
   "PSYCHIC_POWER.BOLT": "Bolt",
   "PSYCHIC_POWER.BARRAGE": "Barrage",
   "PSYCHIC_POWER.STORM": "Storm",
-
   "PSYCHIC_POWER.BOUND": "Bound",
   "PSYCHIC_POWER.UNBOUND": "Unbound",
   "PSYCHIC_POWER.DAEMONIC": "Daemonic",
-
   "RANGE.NONE": "None",
   "RANGE.POINT_BLANK": "Point Blank",
   "RANGE.SHORT": "Short",
   "RANGE.LONG": "Long",
   "RANGE.EXTREME": "Extreme",
-
   "SHIP.CREW_POPULATION": "Population",
   "SHIP.CREW_MORALE": "Morale",
-
   "SHIP_CHARACTERISTIC.CURRENT": "Current",
   "SHIP_CHARACTERISTIC.MAX": "Max",
   "SHIP_CHARACTERISTIC.USED": "Used",
   "SHIP_CHARACTERISTIC.MANOEUVRABILITY": "Manoeuvrability",
+  "SHIP_CHARACTERISTIC.MNVR": "MNVR",
   "SHIP_CHARACTERISTIC.SPEED": "Speed",
+  "SHIP_CHARACTERISTIC.SPD": "SPD",
   "SHIP_CHARACTERISTIC.DETECTION": "Detection",
+  "SHIP_CHARACTERISTIC.DET": "DET",
   "SHIP_CHARACTERISTIC.VOID_SHIELDS": "Void Shields",
   "SHIP_CHARACTERISTIC.ARMOUR": "Armour",
   "SHIP_CHARACTERISTIC.HULL_INTEGRITY": "Hull Integrity",
   "SHIP_CHARACTERISTIC.POWER_GENERATION": "Power Generation",
+  "SHIP_CHARACTERISTIC.POWER_USE": "Power Use",
   "SHIP_CHARACTERISTIC.SPACE": "Space",
+  "SHIP_CHARACTERISTIC.SPACE_USE": "Space Use",
   "SHIP_CHARACTERISTIC.TURRET_RATING": "Turret Rating",
   "SHIP_CHARACTERISTIC.WEAPON_CAPACITY": "Weapon Capacity",
   "SHIP_CHARACTERISTIC.SHIP_POINTS": "Ship Points",
-
+  "SHIP_CHARACTERISTIC.SHIP_POINTS_USE": "Ship Points Use",
   "SHIP_COMPONENT.NAME": "Name",
   "SHIP_COMPONENT.HEADER": "Component",
   "SHIP_COMPONENT.TYPE": "Type",
@@ -290,7 +255,6 @@
   "SHIP_COMPONENT.EXTERNAL": "External",
   "SHIP_COMPONENT.STATUS": "Status",
   "SHIP_COMPONENT.ENVIRONMENT": "Environment",
-
   "SHIP_COMPONENT.PLASMA_DRIVES": "Plasma Drives",
   "SHIP_COMPONENT.WARP_ENGINE": "Warp Engine",
   "SHIP_COMPONENT.VOID_SHIELDS": "Void Shields",
@@ -306,12 +270,9 @@
   "SHIP_COMPONENT.SP_USED": "Ship Points used",
   "SHIP_COMPONENT.ADDITIONAL_EFFECT": "Additional Effect",
   "SHIP_COMPONENT.ADDITIONAL_EFFECT_DESCRIPTION": "Additional Effect description",
-
-  
   "SHIP_COMPONENT_ENVIRONMENT.ACCEPTABLE": "Acceptable",
   "SHIP_COMPONENT_ENVIRONMENT.DEPRESSURIZED": "Depressurized",
   "SHIP_COMPONENT_ENVIRONMENT.FIRE": "Fire",
-
   "SHIP_COMPONENT_MODIFIER.DETECTION": "Detection",
   "SHIP_COMPONENT_MODIFIER.MANOEUVRABILITY": "Manoeuvrability",
   "SHIP_COMPONENT_MODIFIER.SPEED": "Speed",
@@ -320,41 +281,32 @@
   "SHIP_COMPONENT_MODIFIER.ARMOUR": "Armour",
   "SHIP_COMPONENT_MODIFIER.TURRET_RATING": "Turret Rating",
   "SHIP_COMPONENT_MODIFIER.MAX_MORALE": "Maximum Morale",
-
   "SHIP_COMPONENT_STATUS.INTACT": "Intact",
   "SHIP_COMPONENT_STATUS.UNPOWERED": "Unpowered",
   "SHIP_COMPONENT_STATUS.DAMAGED": "Damaged",
   "SHIP_COMPONENT_STATUS.DESTROYED": "Destroyed",
-
-
-
   "SHIP_HULL.NAME": "Name",
   "SHIP_HULL.TYPE": "Type",
-
   "SHIP_HULL.TRANSPORT": "Transport",
   "SHIP_HULL.RAIDER": "Raider",
   "SHIP_HULL.FRIGATE": "Frigate",
   "SHIP_HULL.LIGHT_CRUISER": "Light Cruiser",
   "SHIP_HULL.CRUISER": "Cruiser",
-
   "SHIP_HULL.SPEED": "Speed",
   "SHIP_HULL.MANOEUVRABILITY": "Manoeuvrability",
   "SHIP_HULL.DETECTION": "Detection",
   "SHIP_HULL.INTEGRITY": "Integrity",
   "SHIP_HULL.ARMOUR": "Armour",
   "SHIP_HULL.TURRET_RATING": "Turret Rating",
-  "SHIP_HULL.TR" : "T.R.",
+  "SHIP_HULL.TR": "T.R.",
   "SHIP_HULL.SPACE": "Space",
   "SHIP_HULL.SHIP_POINTS": "Ship Points",
-
-
   "SHIP_HULL.PROW": "Prow",
   "SHIP_HULL.PORT": "Port",
   "SHIP_HULL.STARBOARD": "Starboard",
   "SHIP_HULL.DORSAL": "Dorsal",
   "SHIP_HULL.KEEL": "Keel",
   "SHIP_HULL.AFT": "Aft",
-  
   "SHIP_WEAPON.NOT_WEAPON": "Not a Weapon",
   "SHIP_WEAPON.SLOT": "Slot",
   "SHIP_WEAPON.STRENGTH": "Strength",
@@ -367,8 +319,6 @@
   "SHIP_WEAPON.NOVA_CANNON": "Nova cannon",
   "SHIP_WEAPON.TORPEDO_TUBES": "Torpedo tubes",
   "SHIP_WEAPON.LANDING_BAYS": "Landing Bays",
-
-
   "SKILL.ACROBATICS": "Acrobatics",
   "SKILL.AWARENESS": "Awareness",
   "SKILL.BARTER": "Barter",
@@ -415,17 +365,13 @@
   "SKILL.TRACKING": "Tracking",
   "SKILL.TRADE": "Trade",
   "SKILL.WRANGLING": "Wrangling",
-
   "SKILL.NAME": "Name",
   "SKILL.ADVANCE": "Advance",
   "SKILL.TOTAL": "Total",
   "SKILL.COST": "Cost",
-
   "SIZE": "Size",
-
   "SPECIAL_ABILITY.NAME": "Name",
   "SPECIAL_ABILITY.BENEFIT": "Benefit",
-
   "TAB.STATS": "STATS",
   "TAB.COMBAT": "COMBAT",
   "TAB.ABILITIES": "ABILITIES",
@@ -437,24 +383,20 @@
   "TAB.EFFECT": "EFFECT",
   "TAB.COMPONENTS": "COMPONENTS",
   "TAB.CREW": "CREW",
-
   "TALENT.NAME": "Name",
   "TALENT.BENEFIT": "Benefit",
   "TALENT.COST": "Cost",
   "TALENT.PREREQUISITES": "Prerequisites",
   "TALENT.TIER": "Tier",
   "TALENT.APTITUDES": "Aptitudes",
-
   "TOOL.HEADER": "Tool",
   "TOOL.NAME": "Name",
   "TOOL.SHORT_DESCRIPTION": "Short Description",
   "TOOL.WEIGHT": "Weight",
   "TOOL.CRAFTSMANSHIP": "Craftsmanship",
   "TOOL.AVAILABILITY": "Availability",
-
   "TRAIT.NAME": "Name",
   "TRAIT.BENEFIT": "Benefit",
-
   "TITLE.INSANITY": "INSANITY",
   "TITLE.CHARACTERISTICS": "CHARACTERISTICS",
   "TITLE.CORRUPTION": "CORRUPTION",
@@ -488,8 +430,8 @@
   "TITLE.SHIP_POINTS": "SHIP POINTS",
   "TITLE.SHIP_COMPONENT_LIMITS": "SHIP COMPONENT LIMITS",
   "TITLE.SHIP_HULL": "SHIP HULL",
-  "TITLE.SPACE": "SPACE",
-  "TITLE.POWER": "POWER",
+  "TITLE.SPACE_USE": "SPACE USE",
+  "TITLE.POWER_USE": "POWER USE",
   "TITLE.HULL_INTEGRITY": "HULL INTEGRITY",
   "TITLE.SHIP_CHARACTERISTICS": "SHIP CHARACTERISTICS",
   "TITLE.WEAPON_CAPACITY": "WEAPON CAPACITY",
@@ -503,7 +445,6 @@
   "TITLE.MODIFIERS": "MODIFIERS",
   "TITLE.ADDITIONAL_EFFECTS": "ADDITIONAL EFFECTS",
   "TITLE.DEFENCE": "DEFENCE",
-
   "WEAPON.HEADER": "Weapon",
   "WEAPON.NAME": "Name",
   "WEAPON.CLASS": "Class",
@@ -529,7 +470,6 @@
   "WEAPON.BASIC": "Basic",
   "WEAPON.HEAVY": "Heavy",
   "WEAPON.VEHICLE": "Vehicle",
-
   "WEAPON_MODIFICATION.HEADER": "Weapon Mod",
   "WEAPON_MODIFICATION.NAME": "Name",
   "WEAPON_MODIFICATION.UPGRADES": "Upgrades",
@@ -537,7 +477,6 @@
   "WEAPON_MODIFICATION.AVAILABILITY": "Availability",
   "WEAPON_MODIFICATION.WEIGHT": "Weight",
   "WEAPON_MODIFICATION.INSTALLED": "Installed",
-
   "WOUND.CRITICAL_INJURIES": "Critical Injuries",
   "WOUND.TOTAL": "Total",
   "WOUND.CURRENT": "Current",

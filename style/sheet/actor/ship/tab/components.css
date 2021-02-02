@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 47%;
+    flex-basis: 40%;
     margin-right: 5px;
+    justify-content: center;
+
 }
 .rogue-trader .components .ship-hull .item-list {
     display: flex;
@@ -56,49 +58,45 @@
     border-bottom-style:hidden;
     border-top-style:hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    
-    margin-top: 5px;
+    flex-basis: 10%;
+    background-image: url("../../../../../asset/image/background-input.jpg"); 
+    background-color:blanchedalmond;
+    margin-top: 3px;
     margin-left: 1px;
     margin-right: 1px;
 }
 
+
+
 .rogue-trader .components .ship-hull .segment label {
-    font-size: 16px;
+    font-size: 24px;
 }
 
-.rogue-trader .components .ship-hull .segment .integrity {
+.rogue-trader .components .ship-hull .segment .information {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items:center;
     align-content: center;
 }
 
-.rogue-trader .components .ship-hull .segment .integrity label {
-    flex-basis: 30%;
-    font-size: 16px;
+.rogue-trader .components .ship-hull .segment .information label {
+    font-size: 18px;
     font-weight: bold;
     align-items:center;
 }
-
-.rogue-trader .components .ship-hull .segment .integrity input {
-    font-size: 16px;
-    height: 25px;
-    width: 25px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 
 .rogue-trader .components .ship-component-limits.border {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 30%;
-    margin-right: 5px;
+    flex-basis: 58%;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .rogue-trader .components .ship-component-limits .information {
@@ -108,66 +106,72 @@
     justify-content: space-evenly;
 }
 
-.rogue-trader .components .ship-component-limits .information .max,
-.rogue-trader .components .ship-component-limits .information .current {
+
+.rogue-trader .components .ship-component-limits .segment-top.border {
+    border-top-style:hidden;
     display: flex;
-    align-self: center;
-    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-}
-
-.rogue-trader .components .ship-component-limits .information .max label,
-.rogue-trader .components .ship-component-limits .information .current label {
     flex-basis: 30%;
-    font-size: 16px;
-    font-weight: bold;
-    align-items:center;
+    
+    margin-top: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-image: url("../../../../../asset/image/background-input.jpg"); 
+    background-color:blanchedalmond;
 }
 
-.rogue-trader .components .ship-component-limits .information .max input,
-.rogue-trader .components .ship-component-limits .information .current input {
-    font-size: 16px;
-    height: 30px;
-    width: 30px;
-    margin-left: 10px;
+.rogue-trader .components .ship-component-limits .segment-bottom.border {
+    border-bottom-style:hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 30%;
+    
+    margin-top: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-image: url("../../../../../asset/image/background-input.jpg"); 
+    background-color:blanchedalmond;
+}
+.rogue-trader .components .ship-component-limits .segment-top label {
+    font-size: 18px;
 }
 
-
-.rogue-trader .components .crew-damage.border {
+.rogue-trader .components .ship-component-limits .segment-top .information {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: 20%;
+    flex-wrap: nowrap;
+    align-items:center;
+    align-content: center;
 }
 
-.rogue-trader .components .crew-damage .information {
+.rogue-trader .components .ship-component-limits .segment-top .information label {
+    font-size: 18px;
+    font-weight: bold;
+    align-items:center;
+}
+
+.rogue-trader .components .ship-component-limits .segment-bottom label {
+    font-size: 16px;
+}
+
+.rogue-trader .components .ship-component-limits .segment-bottom .information {
     display: flex;
-    margin-top: 5px;
-    flex-basis: 100%;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:center;
+    align-content: center;
 }
 
-.rogue-trader .components .crew-damage .information .max,
-.rogue-trader .components .crew-damage .information .current {
-    display: flex;
-    align-self: center;
-    text-align: center;
-    align-items: center;
-}
-
-.rogue-trader .components .crew-damage .information label {
-    flex-basis: 30%;
+.rogue-trader .components .ship-component-limits .segment-bottom .information label {
     font-size: 16px;
     font-weight: bold;
     align-items:center;
 }
 
-.rogue-trader .components .crew-damage .information input {
-    font-size: 16px;
-    height: 30px;
-    width: 30px;
-    margin-left: 10p
-}
 
 .rogue-trader .components .weapon-capacity.border {
     display: flex;
@@ -176,6 +180,7 @@
     flex-basis: 100%;
     align-items: center;
     margin-top: 5px;
+    justify-content: center;
 }
 
 
@@ -187,39 +192,34 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    flex-basis: 10%;
     
     margin-top: 5px;
     margin-left: 1px;
     margin-right: 1px;
+    background-image: url("../../../../../asset/image/background-input.jpg"); 
+    background-color:blanchedalmond;
 }
 
 
 .rogue-trader .components .weapon-capacity .segment label {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .rogue-trader .components .weapon-capacity .segment .information {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items:center;
     align-content: center;
 }
 
 .rogue-trader .components .weapon-capacity .segment .information label {
-    flex-basis: 30%;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     align-items:center;
 }
 
-.rogue-trader .components .weapon-capacity .segment .information input {
-    font-size: 16px;
-    height: 30px;
-    width: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
 .rogue-trader .components .ship-components.border {
     display: flex;

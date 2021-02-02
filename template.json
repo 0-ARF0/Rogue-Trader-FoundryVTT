@@ -136,6 +136,13 @@
             "value": 0,
             "max": 0
           },
+          "shipPoints": {
+            "label": "SHIP_CHARACTERISTIC.SHIP_POINTS",
+            "short": "SP",
+            "base": 0,
+            "value": 0,
+            "max": 0
+          },
           "voidShields": {
             "label": "SHIP_CHARACTERISTIC.VOID_SHIELDS",
             "short": "Shields",

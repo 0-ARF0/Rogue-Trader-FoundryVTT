@@ -313,11 +313,11 @@ Handlebars.registerHelper("componentType", function (componentType) {
     case "crewcompartments":
       return game.i18n.localize("SHIP_COMPONENT.CREW_COMPARTMENTS");
     case "bridge":
-        return game.i18n.localize("SHIP_COMPONENT.BRIDGE");
+      return game.i18n.localize("SHIP_COMPONENT.BRIDGE");
     case "sensors":
       return game.i18n.localize("SHIP_COMPONENT.SENSORS");
     case "supplemental":
-        return game.i18n.localize("SHIP_COMPONENT.SUPPLEMENTAL");
+      return game.i18n.localize("SHIP_COMPONENT.SUPPLEMENTAL");
     default:
       return game.i18n.localize("SHIP_COMPONENT.SUPPLEMENTAL");
   }
@@ -385,17 +385,36 @@ Handlebars.registerHelper("componentWeaponCapacity", function (componentWeaponCa
     case "keel":
       return game.i18n.localize("SHIP_HULL.KEEL");
     case "aft":
-        return game.i18n.localize("SHIP_HULL.AFT");
+      return game.i18n.localize("SHIP_HULL.AFT");
     default:
       return game.i18n.localize("SHIP_WEAPON.NOT_WEAPON");
   }
 });
 
 Handlebars.registerHelper("isNotEmptyString", function (value) {
-  if(value === "") {
+  if (value === "") {
     return false;
   }
   return true;
+});
+
+Handlebars.registerHelper("doMath", function (operation, a, b) {
+  operation = normalize(operation, "add");
+  switch (operation) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      if (b == 0) {
+        console.log("division by zero in handlebars helper, defaulting to " + a);
+        return a;
+      }
+    default:
+      return a + b;
+  }
 });
 
 function normalize(data, defaultValue) {

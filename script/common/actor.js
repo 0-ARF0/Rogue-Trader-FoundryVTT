@@ -51,7 +51,8 @@ export class DarkHeresyActor extends Actor {
                 data.data.shipCharacteristics.weaponCapacity.keel.max = x.data.hullKeelWeaponCap;
                 data.data.shipCharacteristics.weaponCapacity.aft.max = x.data.hullAftWeaponCap;
                 detectionTotal += x.data.hullDetection;
-                manoeuvrabilityTotal += x.data.hullManeuvrability;
+                manoeuvrabilityTotal += x.data.hullManoeuvrability;
+                speedTotal += x.data.hullSpeed;
                 spaceTotal += x.data.hullSpace;
                 integrityTotal += x.data.hullIntegrity;
                 armourTotal += x.data.hullArmour;

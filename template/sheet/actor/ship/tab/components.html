@@ -26,66 +26,62 @@
             </div>
         </div>
         <h1>{{localize "TITLE.DEFENCE"}}</h1>
-        <div class="segment border">
-            <label>{{localize "SHIP_HULL.INTEGRITY"}}</label>
-            <div class="integrity">
-                <input name="data.shipCharacteristics.integrity.value" type="number" value="{{data.shipCharacteristics.integrity.value}}" data-dtype="Number"
-                    />
-                /
-                <input name="data.shipCharacteristics.integrity.max" type="number" value="{{data.shipCharacteristics.integrity.max}}" data-dtype="Number" disabled />
+            <div class="segment border">
+                <label>{{localize "SHIP_HULL.INTEGRITY"}}</label>
+                <div class="information">
+                    <label>{{data.shipCharacteristics.integrity.value}} / {{data.shipCharacteristics.integrity.max}}</label>
+                </div>
             </div>
-        </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.ARMOUR"}}</label>
-            <div class="integrity">
-                <input name="data.shipCharacteristics.armour.value" type="number" value="{{data.shipCharacteristics.armour.value}}" data-dtype="Number"
-                    disabled />
+            <div class="information">
+                <label>{{data.shipCharacteristics.armour.value}}</label>
             </div>
         </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.TR"}}</label>
-            <div class="integrity">
-                <input name="data.shipCharacteristics.turretRating.value" type="number" value="{{data.shipCharacteristics.turretRating.value}}" data-dtype="Number"
-                    disabled />
+            <div class="information">
+                <label>{{data.shipCharacteristics.turretRating.value}}</label>
             </div>
         </div>
     </div>
     <div class="ship-component-limits border">
-        <h1>{{localize "TITLE.SPACE"}}</h1>
-        <div class="information">
-            <div class="current">
-                <label>{{localize "SHIP_CHARACTERISTIC.USED"}}</label>
-                <input name="data.shipCharacteristics.space.value" type="number" value="{{data.shipCharacteristics.space.value}}" data-dtype="Number" disabled />
-            </div>
-            <div class="max">
-                <label>{{localize "SHIP_CHARACTERISTIC.MAX"}}</label>
-                <input name="data.shipCharacteristics.space.max" type="number" value="{{data.shipCharacteristics.space.max}}" data-dtype="Number" disabled />
+        <h1>{{localize "TITLE.STATS"}}</h1>
+        <div class="segment-top border">
+            <label>{{localize "SHIP_CHARACTERISTIC.SPACE_USE"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.space.value}} / {{data.shipCharacteristics.space.max}}</label>
             </div>
         </div>
-        <h1 style="margin-top: 5px">{{localize "TITLE.POWER"}}</h1>
-        <div class="information">
-            <div class="current">
-                <label>{{localize "SHIP_CHARACTERISTIC.USED"}}</label>
-                <input name="data.shipCharacteristics.power.value" type="number" value="{{data.shipCharacteristics.power.value}}" data-dtype="Number" disabled />
-            </div>
-            <div class="max">
-                <label>{{localize "SHIP_CHARACTERISTIC.MAX"}}</label>
-                <input name="data.shipCharacteristics.power.max" type="number" value="{{data.shipCharacteristics.power.max}}" data-dtype="Number" disabled />
+        <div class="segment-top border">
+            <label>{{localize "SHIP_CHARACTERISTIC.POWER_USE"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.power.value}} / {{data.shipCharacteristics.power.max}}</label>
             </div>
         </div>
-    </div>
-    <div class="crew-damage border">
-        <h1>{{localize "TITLE.POPULATION"}}</h1>
-        <div class="information">
-            <input name="data.shipCharacteristics.crewPopulation.value" type="number" value="{{data.shipCharacteristics.crewPopulation.value}}" data-dtype="Number" disabled />
-            /
-            <input name="data.shipCharacteristics.crewPopulation.max" type="number" value="{{data.shipCharacteristics.crewPopulation.max}}" data-dtype="Number" disabled />
+        <div class="segment-top border">
+            <label>{{localize "SHIP_CHARACTERISTIC.SHIP_POINTS_USE"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.shipPoints.value}} / {{data.shipCharacteristics.shipPoints.max}}</label>
+            </div>
         </div>
-        <h1 style="margin-top: 5px">{{localize "TITLE.MORALE"}}</h1>
-        <div class="information">
-            <input name="data.shipCharacteristics.crewMorale.value" type="number" value="{{data.shipCharacteristics.crewMorale.value}}" data-dtype="Number" disabled />
-            /
-            <input name="data.shipCharacteristics.crewMorale.max" type="number" value="{{data.shipCharacteristics.crewMorale.max}}" data-dtype="Number" disabled />
+        <div class="segment-bottom border">
+            <label>{{localize "SHIP_CHARACTERISTIC.SPD"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.speed.value}}</label>
+            </div>
+        </div>
+        <div class="segment-bottom border">
+            <label>{{localize "SHIP_CHARACTERISTIC.MNVR"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.manoeuvrability.value}}</label>
+            </div>
+        </div>
+        <div class="segment-bottom border">
+            <label>{{localize "SHIP_CHARACTERISTIC.DET"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.detection.value}}</label>
+            </div>
         </div>
     </div>
     <div class="weapon-capacity border">
@@ -93,61 +89,37 @@
         <div class="segment border">
             <label>{{localize "SHIP_HULL.PROW"}}</label>
             <div class="information">
-                <input name="data.shipCharacteristics.weaponCapacity.prow.value" type="number" value="{{data.shipCharacteristics.weaponCapacity.prow.value}}" data-dtype="Number"
-                    disabled />
-                /
-                <input name="data.shipCharacteristics.weaponCapacity.prow.max" type="number" value="{{data.shipCharacteristics.weaponCapacity.prow.max}}" data-dtype="Number"
-                    disabled />
+                <label>{{data.shipCharacteristics.weaponCapacity.prow.value}} / {{data.shipCharacteristics.weaponCapacity.prow.max}}</label>
             </div>
         </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.PORT"}}</label>
             <div class="information">
-                <input name="data.shipCharacteristics.weaponCapacity.port.value" type="number" value="{{data.shipCharacteristics.weaponCapacity.port.value}}" data-dtype="Number"
-                    disabled />
-                /
-                <input name="data.shipCharacteristics.weaponCapacity.port.max" type="number" value="{{data.shipCharacteristics.weaponCapacity.port.max}}" data-dtype="Number"
-                    disabled />
+                <label>{{data.shipCharacteristics.weaponCapacity.port.value}} / {{data.shipCharacteristics.weaponCapacity.port.max}}</label>
             </div>
         </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.STARBOARD"}}</label>
             <div class="information">
-                <input name="data.shipCharacteristics.weaponCapacity.starboard.value" type="number" value="{{data.shipCharacteristics.weaponCapacity.starboard.value}}"
-                    data-dtype="Number" disabled />
-                /
-                <input name="data.shipCharacteristics.weaponCapacity.starboard.max" type="number" value="{{data.shipCharacteristics.weaponCapacity.starboard.max}}"
-                    data-dtype="Number" disabled />
+                <label>{{data.shipCharacteristics.weaponCapacity.starboard.value}} / {{data.shipCharacteristics.weaponCapacity.starboard.max}}</label> 
             </div>
         </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.DORSAL"}}</label>
             <div class="information">
-                <input name="data.shipCharacteristics.weaponCapacity.dorsal.value" type="number" value="{{data.shipCharacteristics.weaponCapacity.dorsal.value}}"
-                    data-dtype="Number" disabled />
-                /
-                <input name="data.shipCharacteristics.weaponCapacity.dorsal.max" type="number" value="{{data.shipCharacteristics.weaponCapacity.dorsal.max}}" data-dtype="Number"
-                    disabled />
+                <label>{{data.shipCharacteristics.weaponCapacity.dorsal.value}} / {{data.shipCharacteristics.weaponCapacity.dorsal.max}}</label>
             </div>
         </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.KEEL"}}</label>
             <div class="information">
-                <input name="data.shipCharacteristics.weaponCapacity.keel.value" type="number" value="{{data.shipCharacteristics.weaponCapacity.keel.value}}" data-dtype="Number"
-                    disabled />
-                /
-                <input name="data.shipCharacteristics.weaponCapacity.keel.max" type="number" value="{{data.shipCharacteristics.weaponCapacity.keel.max}}" data-dtype="Number"
-                    disabled />
+                <label>{{data.shipCharacteristics.weaponCapacity.keel.value}} / {{data.shipCharacteristics.weaponCapacity.keel.max}}</label>
             </div>
         </div>
         <div class="segment border">
             <label>{{localize "SHIP_HULL.AFT"}}</label>
             <div class="information">
-                <input name="data.shipCharacteristics.weaponCapacity.aft.value" type="number" value="{{data.shipCharacteristics.weaponCapacity.aft.value}}" data-dtype="Number"
-                    disabled />
-                /
-                <input name="data.shipCharacteristics.weaponCapacity.aft.max" type="number" value="{{data.shipCharacteristics.weaponCapacity.aft.max}}" data-dtype="Number"
-                    disabled />
+                <label>{{data.shipCharacteristics.weaponCapacity.aft.value}} / {{data.shipCharacteristics.weaponCapacity.aft.max}}</label>
             </div>
         </div>
     </div>
