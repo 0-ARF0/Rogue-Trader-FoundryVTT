@@ -58,22 +58,22 @@ export class DarkHeresyActor extends Actor {
                 
                 switch (x.data.weapon.weaponCapacityUse) {
                     case "prow":
-                        data.shipCharacteristics.weaponCapacity.prow.value += 1;
+                        data.data.shipCharacteristics.weaponCapacity.prow.value += 1;
                         break;
                     case "port":
-                        data.shipCharacteristics.weaponCapacity.port.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.port.value  += 1;
                         break;
                     case "starboard":
-                        data.shipCharacteristics.weaponCapacity.starboard.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.starboard.value  += 1;
                         break;
                     case "dorsal":
-                        data.shipCharacteristics.weaponCapacity.dorsal.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.dorsal.value  += 1;
                         break;
                     case "keel":
-                        data.shipCharacteristics.weaponCapacity.keel.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.keel.value  += 1;
                         break;
                     case "aft":
-                        data.shipCharacteristics.weaponCapacity.aft.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.aft.value  += 1;
                         break;
                     default:
                         break;
@@ -128,6 +128,10 @@ export class DarkHeresyActor extends Actor {
             if (item.isShipHull) {
                 data.data.hasHull = true;
             }
+            if (item.isShipComponent) {
+                item.data.weapon.isWeapon = item.data.weapon.weaponCapacityUse === "none" ? false : true;
+            }
+            
         }
     }
 
