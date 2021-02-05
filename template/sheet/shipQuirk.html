@@ -1,0 +1,149 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="header border">
+        <div class="flex row">
+            <div class="avatar">
+                <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+            </div>
+            <div class="flex column grow justify-center">
+                <div class="name header-row">
+                    <label>{{localize "SHIP_COMPONENT.NAME"}}</label>
+                    <input name="name" type="text" value="{{item.name}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-tabs tabs flex row" data-group="primary">
+        <b class="item" data-tab="data">{{localize "TAB.DATA"}}</b>
+        <b class="item" data-tab="notes">{{localize "TAB.NOTES"}}</b>
+    </div>
+
+    <div class="sheet-body">
+        <div class="tab" data-group="primary" data-tab="data">
+            <div class="flex wrap stats">
+                <div class="stats border">
+                    <h1>{{localize "TITLE.STATS"}}</h1>
+                    <div class="stats">
+                        <div class="state-row">
+                            <label>{{localize "SHIP_QUIRK.ACTIVE"}}</label>
+                            {{#if data.isActive}}
+                            <input name="data.isActive" type="checkbox" value="isActive" checked />
+                            {{else}}
+                            <input name="data.isActive" type="checkbox" value="isActive" />
+                            {{/if}}
+                        </div>
+                    <div class="stats-row">
+                        <label>{{localize "SHIP_COMPONENT.POWER_USED"}}</label>
+                        <input name="data.powerUse" type="number" value="{{data.powerUse}}" data-dtype="Number" />
+                    </div>
+                    <div class="stats-row">
+                        <label>{{localize "SHIP_COMPONENT.POWER_GENERATED"}}</label>
+                        <input name="data.powerGenerated" type="number" value="{{data.powerGenerated}}"
+                            data-dtype="Number" />
+                    </div>
+                    <div class="stats-row">
+                        <label>{{localize "SHIP_COMPONENT.SPACE_USED"}}</label>
+                        <input name="data.spaceUse" type="number" value="{{data.spaceUse}}" data-dtype="Number" />
+                    </div>
+                </div>
+            </div>
+                <div class="modifiers border">
+                    <h1 style="margin-bottom: 5px;">{{localize "TITLE.MODIFIERS"}}</h1>
+                    <div class="modifiers">
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.DETECTION"}}</label>
+                            <input name="data.detectionMod" type="number" value="{{data.detectionMod}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.MANOEUVRABILITY"}}</label>
+                            <input name="data.manoeuvrabilityMod" type="number" value="{{data.manoeuvrabilityMod}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.SPEED"}}</label>
+                            <input name="data.speedMod" type="number" value="{{data.speedMod}}" data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.INTEGRITY"}}</label>
+                            <input name="data.integrityMod" type="number" value="{{data.integrityMod}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.ARMOUR"}}</label>
+                            <input name="data.armourMod" type="number" value="{{data.armourMod}}" data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.VOID_SHIELDS"}}</label>
+                            <input name="data.voidShieldsMod" type="number" value="{{data.voidShieldsMod}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.TURRET_RATING"}}</label>
+                            <input name="data.turretRatingMod" type="number" value="{{data.turretRatingMod}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.MAX_MORALE"}}</label>
+                            <input name="data.moraleMaxMod" type="number" value="{{data.moraleMaxMod}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "SHIP_COMPONENT_MODIFIER.MAX_POPULATION"}}</label>
+                            <input name="data.popMaxMod" type="number" value="{{data.popMaxMod}}" data-dtype="Number" />
+                        </div>
+                    </div>
+                    <div class="modifiers">
+                        <div class="modifiers-row">
+                            <label>{{localize "ACHIEVEMENT_POINTS.CREED"}}</label>
+                            <input name="data.apCreed" type="number" value="{{data.apCreed}}" data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "ACHIEVEMENT_POINTS.CRIMINAL"}}</label>
+                            <input name="data.apCriminal" type="number" value="{{data.apCriminal}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "ACHIEVEMENT_POINTS.EXPLORATION"}}</label>
+                            <input name="data.apExploration" type="number" value="{{data.apExploration}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "ACHIEVEMENT_POINTS.MILITARY"}}</label>
+                            <input name="data.apMilitary" type="number" value="{{data.apMilitary}}"
+                                data-dtype="Number" />
+                        </div>
+                        <div class="modifiers-row">
+                            <label>{{localize "ACHIEVEMENT_POINTS.TRADE"}}</label>
+                            <input name="data.apTrade" type="number" value="{{data.apTrade}}" data-dtype="Number" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-effects border">
+                <h1>{{localize "TITLE.ADDITIONAL_EFFECTS"}}</h1>
+                <div class="additional-effects">
+                    <div class="additional-effects-row">
+                        <label>{{localize "SHIP_COMPONENT.ADDITIONAL_EFFECT"}}</label>
+                        {{#if data.hasAdditionalEffect}}
+                        <input name="data.hasAdditionalEffect" type="checkbox" value="hasAdditionalEffect" checked />
+                        {{else}}
+                        <input name="data.hasAdditionalEffect" type="checkbox" value="hasAdditionalEffect" />
+                        {{/if}}
+                        <input name="data.additionalEffect" type="text" value="{{data.additionalEffect}}" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab" data-group="primary" data-tab="notes">
+            <div class="notes-editor border">
+                <h1>{{localize "TITLE.NOTES"}}</h1>
+                <div style="height: 275px; width: 100%">
+                    {{editor content=data.description target="data.description" button=true owner=owner
+                    editable=editable}}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>

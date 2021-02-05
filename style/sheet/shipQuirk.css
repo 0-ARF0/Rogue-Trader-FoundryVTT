@@ -1,0 +1,138 @@
+.rogue-trader.shipQuirk .notes-editor {
+    height: 290px;
+    max-height: 290px;
+}
+
+.rogue-trader.shipQuirk .stats {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+
+    margin: 0 2px;
+}
+
+.rogue-trader.shipQuirk .stats.border {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40%;
+    justify-content: center;
+    
+}
+
+
+.rogue-trader.shipQuirk .stats-row {
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+.rogue-trader.shipQuirk .stats-row label {
+    flex-basis: 60%;
+    justify-content: center;
+}
+.rogue-trader.shipQuirk .stats-row input {
+    width: 3em;
+}
+
+.rogue-trader.shipQuirk .stat.type select {
+    width: 10em;
+}
+
+.rogue-trader.shipQuirk .state {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 0 2px;
+    justify-content: normal;
+    align-items: center;
+}
+
+.rogue-trader.shipQuirk .state.border {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: center;
+}
+
+
+.rogue-trader.shipQuirk .state-row {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap:wrap;
+    margin-right: 5px;
+    align-items: center;
+}
+.rogue-trader.shipQuirk .state-row label {
+    flex-basis: 20%;
+
+}
+.rogue-trader.shipQuirk .state-row select {
+    flex-basis: 75%;
+}
+
+.rogue-trader.shipQuirk .modifiers.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-basis: 59%;
+    align-items: flex-start;
+}
+
+.rogue-trader.shipQuirk .modifiers {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+}
+.rogue-trader.shipQuirk .modifiers-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    
+}
+
+.rogue-trader.shipQuirk .modifiers-row label {
+    width: 6em;
+}
+.rogue-trader.shipQuirk .modifiers-row input {
+    width: 2em;
+}
+
+.rogue-trader.shipQuirk .additional-effects.border {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    flex-basis: 100%;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.rogue-trader.shipQuirk .additional-effects {
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+align-items:stretch;
+align-content: flex-start;
+
+}
+.rogue-trader.shipQuirk .additional-effects .additional-effects-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: stretch;
+    margin-top: 2px;
+    align-items: center;
+
+    
+}
+.rogue-trader.shipQuirk .additional-effects .additional-effects-row label {
+    width: 6em;
+    
+}
+
+.rogue-trader.shipQuirk .additional-effects .additional-effects-row input {
+    width: 30em;
+}

@@ -1,0 +1,82 @@
+.rogue-trader .crew .crew-rating.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    margin-right: 5px;
+
+
+}
+
+.rogue-trader .crew .crew-rating {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+
+    align-items: center;
+}
+
+.rogue-trader .crew .crew-rating label {
+    font-size: 18px;
+}
+.rogue-trader .crew .crew-rating input {
+    margin-top: 5px;
+    font-size: 36px;
+    height: 64px;
+    width: 64px;
+}
+
+.rogue-trader .crew .crew-status.border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 75%;
+    justify-content: center;
+
+}
+
+.rogue-trader .crew .crew-status .segment.border {
+    border-top-style:hidden;
+    border-bottom-style:hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 20%;
+    
+    margin-top: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-image: url("../../../../../asset/image/background-input.jpg"); 
+    background-color:blanchedalmond;
+}
+
+.rogue-trader .crew .crew-status .segment {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.rogue-trader .crew .crew-status .segment label {
+    font-size: 18px;
+}
+
+.rogue-trader .crew .crew-status .segment .information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:center;
+    align-content: center;
+}
+
+.rogue-trader .crew .crew-status .segment .information label {
+    font-size: 18px;
+    font-weight: bold;
+    align-items:center;
+}

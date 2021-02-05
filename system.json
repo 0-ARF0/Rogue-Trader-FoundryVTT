@@ -37,6 +37,7 @@
     "style/sheet/force-field.css",
     "style/sheet/shipHull.css",
     "style/sheet/shipComponent.css",
+    "style/sheet/shipQuirk.css",
     "style/sheet/actor/actor.css",
     "style/sheet/actor/acolyte.css",
     "style/sheet/actor/npc.css",

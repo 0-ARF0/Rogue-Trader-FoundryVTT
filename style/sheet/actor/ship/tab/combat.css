@@ -1,0 +1,6 @@
+.rogue-trader .combat .hull-integrity {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+}

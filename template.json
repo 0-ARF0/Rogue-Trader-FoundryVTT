@@ -106,7 +106,8 @@
             "label": "SHIP_CHARACTERISTIC.SPEED",
             "short": "Space",
             "base": 0,
-            "value": 0
+            "value": 0,
+            "half": 0
           },
           "integrity": {
             "label": "SHIP_CHARACTERISTIC.INTEGRITY",
@@ -1146,10 +1147,25 @@
         }
       },
       "shipInitiative": {
-        "shipInitiative": {
-          "characteristic": "detection",
-          "base": "1d10"
+        "initiative": {
+          "base": "1d10",
+          "bonus": 0
         }
+      },
+      "shipStatus": {
+        "shipStatus": {
+          "isSilentRunning": false,
+          "isCrippled": false,
+          "isMutiny": false,
+          "isTomb": false
+        }
+      },
+      "shipAPModifiers": {
+        "creed": 0,
+        "criminal": 0,
+        "exploration": 0,
+        "military": 0,
+        "trade": 0
       },
       "wounds": {
         "wounds": {
@@ -1265,20 +1281,27 @@
     "playership": {
       "templates": [
         "shipCharacteristics",
+        "shipStatus",
         "shipInitiative",
+        "shipAchievementPoints",
         "hullIntegrity",
         "crewSkill"
       ],
-      "hasHull": false
+      "hasHull": false,
+      "isCrewLossEffectsAutomated": true
+
     },
     "npcship": {
       "templates": [
         "shipCharacteristics",
+        "shipStatus",
         "shipInitiative",
+        "shipAchievementPoints",
         "hullIntegrity",
         "crewSkill"
       ],
-      "hasHull": false
+      "hasHull": false,
+      "isCrewLossEffectsAutomated": true
     }
   },
   "Item": {
@@ -1302,7 +1325,6 @@
       "weapon",
       "weaponModification",
       "shipComponent",
-      "shipWeapon",
       "shipHull",
       "shipQuirk"
     ],
@@ -1512,7 +1534,7 @@
       "templates": [
         "shipCharacteristicMods"
       ],
-      "isActive": true
+      "isActive": false
     },
     "shipComponent": {
       "templates": [

@@ -19,6 +19,7 @@ export class DarkHeresyActor extends Actor {
 
     _computeShipCharacteristics(data) {
         data.data.shipCharacteristics.type.typeName = "NO HULL";
+        let achievementComponents = [];
         for (let x of Object.values(data.items)) {
             if (x.data.hasOwnProperty('hullType')) {
                 data.data.shipCharacteristics.type.typeName = x.data.hullType;
@@ -55,31 +56,98 @@ export class DarkHeresyActor extends Actor {
                 data.data.shipCharacteristics.turretRating.value += x.data.turretRatingMod;
                 data.data.shipCharacteristics.crewPopulation.max += x.data.popMaxMod;
                 data.data.shipCharacteristics.crewMorale.max += x.data.moraleMaxMod;
-                
+            }
+            if (x.type === "shipComponent") {
                 switch (x.data.weapon.weaponCapacityUse) {
                     case "prow":
                         data.data.shipCharacteristics.weaponCapacity.prow.value += 1;
                         break;
                     case "port":
-                        data.data.shipCharacteristics.weaponCapacity.port.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.port.value += 1;
                         break;
                     case "starboard":
-                        data.data.shipCharacteristics.weaponCapacity.starboard.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.starboard.value += 1;
                         break;
                     case "dorsal":
-                        data.data.shipCharacteristics.weaponCapacity.dorsal.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.dorsal.value += 1;
                         break;
                     case "keel":
-                        data.data.shipCharacteristics.weaponCapacity.keel.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.keel.value += 1;
                         break;
                     case "aft":
-                        data.data.shipCharacteristics.weaponCapacity.aft.value  += 1;
+                        data.data.shipCharacteristics.weaponCapacity.aft.value += 1;
                         break;
                     default:
                         break;
                 }
+                
             }
         }
+        if (data.data.isCrewMoraleLossEffectsAutomated) {
+            let m = data.data.shipCharacteristics.crewMorale.value;
+            if (m < 1) {
+                data.data.isMutiny = true;
+            }
+            if (m < 10) {
+                data.data.shipCharacteristics.speed.value -= 10;
+                data.data.shipCharacteristics.manoeuvrability.value -= 10;
+                data.data.shipCharacteristics.detection.value -= 10;
+            }
+            if (m < 20) {
+
+            }
+            if (m < 40) {
+                data.data.shipCharacteristics.manoeuvrability.value -= 10;
+            }
+            if (m < 50) {
+
+            }
+            if (m < 60) {
+
+            }
+            if (m < 80) {
+
+            }
+        }
+
+        if (data.data.isCrewPopulationLossEffectsAutomated) {
+            let p = data.data.shipCharacteristics.crewPopulation.value;
+            if (p < 1) {
+                data.data.isTomb = true;
+            }
+            if (p < 10) {
+
+            }
+            if (p < 20) {
+
+            }
+            if (p < 40) {
+                // lose all component achievement modifiers
+            }
+            if (p < 50) {
+                data.data.shipCharacteristics.manoeuvrability.value -= 10;
+            }
+            if (p < 60) {
+                // -5 to Boarding actions, opposing Hit and Run, fighting fires, making emergency repairs 
+            }
+            if (p < 80) {
+                // all travel times increase by 1d5 days
+            }
+        }
+        if (data.data.shipStatus.isCrippled) {
+            data.data.shipCharacteristics.manoeuvrability.value -= 10;
+            data.data.shipCharacteristics.detection.value -= 10;
+            data.data.shipCharacteristics.speed.value = Math.floor(data.data.shipCharacteristics.speed.value / 2);
+        }
+
+        data.data.initiative.bonus = Math.floor(data.data.shipCharacteristics.detection.value / 10);
+        if (data.data.shipStatus.isSilentRunning) {
+            data.data.shipCharacteristics.speed.value = Math.floor(data.data.shipCharacteristics.speed.value / 2);
+            //halve strength of weapon components
+        }
+
+        data.data.shipCharacteristics.speed.half = Math.floor(data.data.shipCharacteristics.speed.value / 2);
+
     }
     _computeCharacteristics(data) {
         let middle = Object.values(data.data.characteristics).length / 2;
@@ -128,10 +196,6 @@ export class DarkHeresyActor extends Actor {
             if (item.isShipHull) {
                 data.data.hasHull = true;
             }
-            if (item.isShipComponent) {
-                item.data.weapon.isWeapon = item.data.weapon.weaponCapacityUse === "none" ? false : true;
-            }
-            
         }
     }
 

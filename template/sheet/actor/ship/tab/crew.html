@@ -1,0 +1,31 @@
+<div class="flex wrap crew">
+    <div class="crew-rating border">
+        <h1>{{localize "TITLE.CREW_RATING"}}</h1>
+        <div class="crew-rating">
+            <input type="number" value="{{data.crewSkill.value}}" data-dtype="Number" />
+        </div>
+    </div>
+    <div class="crew-status border">
+        <h1>{{localize "TITLE.CREW_STATUS"}}</h1>
+        <div class="segment border">
+            <label>{{localize "SHIP.CREW_POPULATION"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.crewPopulation.value}} /
+                    {{data.shipCharacteristics.crewPopulation.max}}</label>
+            </div>
+        </div>
+        <div class="segment border">
+            <label>{{localize "SHIP.CREW_MORALE"}}</label>
+            <div class="information">
+                <label>{{data.shipCharacteristics.crewMorale.value}} /
+                    {{data.shipCharacteristics.crewMorale.max}}</label>
+            </div>
+        </div>
+        <label>{{localize "SHIP.AUTOMATE_EFFECTS"}}</label>
+        {{#if data.isCrewLossEffectsAutomated}}
+        <input name="data.isCrewLossEffectsAutomated" type="checkbox" value="isCrewLossEffectsAutomated" checked />
+        {{else}}
+        <input name="data.isCrewLossEffectsAutomated" type="checkbox" value="isCrewLossEffectsAutomated" />
+        {{/if}}
+    </div>
+</div>

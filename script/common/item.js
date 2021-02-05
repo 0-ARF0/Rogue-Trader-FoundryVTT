@@ -23,7 +23,6 @@ export class DarkHeresyItem extends Item {
         item.isAmmunition = item.type === "ammunition";
         item.isForceField = item.type === "forceField";
         item.isShipComponent = item.type === "shipComponent";
-        item.isShipWeapon = item.type === "shipWeapon";
         item.isShipHull = item.type === "shipHull";
         const html = await renderTemplate("systems/rogue-trader/template/chat/item.html", item);
         const chatData = {
