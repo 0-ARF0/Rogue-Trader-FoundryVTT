@@ -91,7 +91,7 @@
             <div class="items">
                 {{#each actor.items as |item|}}
                 {{#if item.isShipComponent}}
-                {{#if item.weapon.isWeapon}}
+                {{#if item.data.weapon.isWeapon}}
                 <div class="weapon item flex row" data-item-id="{{item._id}}">
                     <div class="flex name">
                         <div class="image-container">
@@ -104,7 +104,7 @@
                     <div class="range">{{item.data.weapon.range}}</div>
                     <div class="strength">{{item.data.weapon.strength}}</div>
                     <div class="damage">{{item.data.weapon.damage}}</div>
-                    <div class="crit-rating">{{item.data.crit-rating}}</div>
+                    <div class="crit-rating">{{item.data.weapon.critRating}}</div>
                 </div>
                 {{/if}}
                 {{/if}}

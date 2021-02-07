@@ -58,6 +58,7 @@ export class DarkHeresyActor extends Actor {
                 data.data.shipCharacteristics.crewMorale.max += x.data.moraleMaxMod;
             }
             if (x.type === "shipComponent") {
+                x.data.weapon.isWeapon = true;
                 switch (x.data.weapon.weaponCapacityUse) {
                     case "prow":
                         data.data.shipCharacteristics.weaponCapacity.prow.value += 1;
@@ -78,6 +79,7 @@ export class DarkHeresyActor extends Actor {
                         data.data.shipCharacteristics.weaponCapacity.aft.value += 1;
                         break;
                     default:
+                        x.data.weapon.isWeapon = false;
                         break;
                 }
                 
