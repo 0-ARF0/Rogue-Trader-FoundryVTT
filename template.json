@@ -1394,7 +1394,8 @@
         "leftLeg": 0,
         "rightLeg": 0
       },
-      "maxAgility": 0
+      "maxAgility": 0,
+      "ignoreStackingRules": false
     },
     "criticalInjury": {
       "templates": [

@@ -8,11 +8,11 @@ export class DarkHeresyActor extends Actor {
         }
         else {
             this._computeCharacteristics(this.data);
-            this._computeSkills(this.data);
-            this._computeExperience(this.data);
+            this._computeSkills(this.data);       
             this._computeArmour(this.data);
             this._computeMovement(this.data);
             this._computeItems(this.data);
+            this._computeExperience(this.data);
         }
 
     }
@@ -293,6 +293,9 @@ export class DarkHeresyActor extends Actor {
                         let armourVal = armour.data.part[location] || 0;
                         if (armourVal > acc[location]) {
                             acc[location] = armourVal;
+                        }
+                        if(armour.data.ignoreStackingRules) {
+                            acc[location] += armourVal;
                         }
                     }
                     )

@@ -34,6 +34,12 @@
                                 <option value="power">{{localize "ARMOUR_TYPE.POWER"}}</option>
                             {{/select}}
                         </select>
+                        <label>{{localize "ARMOUR.IGNORE_STACKING_RULES"}}</label>
+                        {{#if data.ignoreStackingRules}}
+                            <input name="data.ignoreStackingRules" type="checkbox" value="installed" checked/>
+                        {{else}}
+                            <input name="data.ignoreStackingRules" type="checkbox" value="installed"/>
+                        {{/if}}
                     </div>
                     <div class="stat max-agility">
                         <label>{{localize "ARMOUR.MAX_AGILITY"}}</label>
