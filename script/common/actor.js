@@ -293,8 +293,7 @@ export class DarkHeresyActor extends Actor {
                         let armourVal = armour.data.part[location] || 0;
                         if (armourVal > acc[location]) {
                             acc[location] = armourVal;
-                        }
-                        if(armour.data.ignoreStackingRules) {
+                        } else if(armour.data.ignoreStackingRules) {
                             acc[location] += armourVal;
                         }
                     }

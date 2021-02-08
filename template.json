@@ -1009,6 +1009,11 @@
                 "advance": -20,
                 "cost": 0
               },
+              "shipDialect": {
+                "label": "Ship Dialect",
+                "advance": -20,
+                "cost": 0
+              },
               "technaLingua": {
                 "label": "Techna-Lingua",
                 "advance": -20,
