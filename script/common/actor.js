@@ -82,7 +82,7 @@ export class DarkHeresyActor extends Actor {
                         x.data.weapon.isWeapon = false;
                         break;
                 }
-                
+
             }
         }
         if (data.data.isCrewMoraleLossEffectsAutomated) {
@@ -224,7 +224,11 @@ export class DarkHeresyActor extends Actor {
             item.isForceField = item.type === "forceField";
             item.isAbilities = item.isTalent || item.isTrait || item.isSpecialAbility;
             if (item.data.hasOwnProperty('weight')) {
-                encumbrance = encumbrance + item.data.weight;
+                if (item.data.hasOwnProperty('quantity')) {
+                    encumbrance += item.data.weight * item.data.quantity;
+                } else {
+                    encumbrance += item.data.weight;
+                }
             }
         }
         this._computeEncumbrance(data, encumbrance);
