@@ -46,10 +46,10 @@ function _rollTarget(rollData) {
     rollData.isSuccess = rollData.result <= rollData.target;
     if (rollData.isSuccess) {
         rollData.dof = 0;
-        rollData.dos = 1 + _getDegree(rollData.target, rollData.result);
+        rollData.dos = 0 + _getDegree(rollData.target, rollData.result);
     } else {
         rollData.dos = 0;
-        rollData.dof = 1 + _getDegree(rollData.result, rollData.target);
+        rollData.dof = 0 + _getDegree(rollData.result, rollData.target);
     }
     if (typeof rollData.psy !== "undefined") _computePsychicPhenomena(rollData);
 }
@@ -152,14 +152,14 @@ function _getLocation(result) {
 function _computeRateOfFire(rollData) {
     rollData.maxAdditionalHit = 0;
     if (rollData.attackType.name === "standard" || rollData.attackType.name === "bolt") {
-        rollData.attackType.modifier = 10;
+        rollData.attackType.modifier = 0;
         rollData.attackType.hitMargin = 0;
     } else if (rollData.attackType.name === "swift" || rollData.attackType.name === "semi_auto" || rollData.attackType.name === "barrage") {
-        rollData.attackType.modifier = 0;
+        rollData.attackType.modifier = 10;
         rollData.attackType.hitMargin = 2;
         rollData.maxAdditionalHit = rollData.rateOfFire.burst - 1;
     } else if (rollData.attackType.name === "lightning" || rollData.attackType.name === "full_auto" || rollData.attackType.name === "storm") {
-        rollData.attackType.modifier = -10;
+        rollData.attackType.modifier = 20;
         rollData.attackType.hitMargin = 1;
         rollData.maxAdditionalHit = rollData.rateOfFire.full - 1;
     } else if (rollData.attackType.name === "called_shot") {
@@ -205,7 +205,8 @@ function _getLocationByIt(part, numberOfHit) {
 
 
 function _getDegree(a, b) {
-    return Math.floor(a / 10) - Math.floor(b / 10);
+    return Math.floor((a / 10) - (b / 10));
+    //return Math.floor(a / 10) - Math.floor(b / 10);
 }
 
 async function _sendToChat(rollData) {
