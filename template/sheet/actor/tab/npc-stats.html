@@ -48,7 +48,7 @@
                     {{#unless skill.isSpecialist}}
                         <div class="skill">
                             <div class="name">
-                                <button class="roll-skill" data-skill="{{key}}">{{localize skill.label}}</button>
+                                <button class="roll-skill" data-skill="{{key}}">{{localize skill.label}}{{#if skill.advancedSkill}}*{{/if}}</button>
                             </div>
                             <input class="total" type="number" value="{{skill.total}}" data-dtype="Number" disabled />
                             <div class="information">
