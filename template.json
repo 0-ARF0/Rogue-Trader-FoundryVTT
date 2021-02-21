@@ -435,6 +435,17 @@
               }
             }
           },
+          "concealment": {
+            "label": "SKILL.CONCEALMENT",
+            "characteristics": [
+              "Ag"
+            ],
+            "advance": -20,
+            "advancedSkill": false,
+            "isSpecialist": false,
+            "specialities": {},
+            "cost": 0
+          },
           "contortionist": {
             "label": "SKILL.CONTORTIONIST",
             "characteristics": [
